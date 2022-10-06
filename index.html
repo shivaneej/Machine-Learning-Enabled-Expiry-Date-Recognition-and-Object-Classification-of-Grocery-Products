@@ -1,34 +1,315 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en-US"><head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!------<title>Expiry Date Recognition and Object Classification using Neural Networks</title>------>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-   </head>
-<body>
-  <nav>
-    <div class="menu">
-      <div class="logo">
-        <a href="#">Expiry Date Recognition and Object Classification using Neural Networks</a>
-      </div>
-      <ul>
-        <li><a href="#">Project Proposal</a></li>
-        <li><a href="#">Midterm Report</a></li>
-        <li><a href="#">Final Report</a></li>
-        <li><a href="#">Video</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="img"></div>
-  <div class="center">
-    <div class="title">Project Proposal</div>
-    <div class="sub_title">Introduction and Background</div>
-    <div class="btns">
-      <button>Learn More</button>
-      <button>Subscribe</button>
-    </div>
-  </div>
-</body>
-</html>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>CS7641 Machine Learning Project Group 3 | hellcat178.github.io</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="CS7641 Machine Learning Project Group 3">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shih En Chen, Xiaobo He, Xinyu Chen, Guoqiang Zhang, Zhangqi Luo">
+<meta property="og:description" content="Shih En Chen, Xiaobo He, Xinyu Chen, Guoqiang Zhang, Zhangqi Luo">
+<link rel="canonical" href="https://hellcat178.github.io/">
+<meta property="og:url" content="https://hellcat178.github.io/">
+<meta property="og:site_name" content="hellcat178.github.io">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="CS7641 Machine Learning Project Group 3">
+<script type="application/ld+json">
+{"headline":"CS7641 Machine Learning Project Group 3","description":"Shih En Chen, Xiaobo He, Xinyu Chen, Guoqiang Zhang, Zhangqi Luo","url":"https://hellcat178.github.io/","@type":"WebSite","name":"hellcat178.github.io","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a4084a6a32356fb9d3ff48cd1f54e3f329fbb139">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body class="vsc-initialized">
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">CS7641 Machine Learning Project Group 3</h1>
+      <h2 class="project-tagline">Shih En Chen, Xiaobo He, Xinyu Chen, Guoqiang Zhang, Zhangqi Luo</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="cs7641-machine-learning-project-group-3">CS7641 Machine Learning Project Group 3</h1>
+
+<h1 id="introduction">Introduction</h1>
+<p>The main task of image classification is to comprehend an image as a whole and assign it a particular label. Despite its simplicity, this is one of the core computer vision problems with a wide range of practical applications. The process of recognizing a visual concept may seem trivial to a human, but there are challenges faced by a Computer Vision algorithm, such as viewpoint variations, scale variations, background clutter, and intra-class variation. To accomplish this task, we’ll have to provide the computer with many examples of each class. Then, we’ll have to develop algorithms that process each sample and learn about its visual appearance. Due to its data-driven nature, image classification requires a significant amount of computation. It is a problem in situations with large scales and relatively limited resources. In addition, a training dataset of labeled images must be gathered first. Unfortunately, we don’t always have access to enough labeled data when training models. The recent evolution of CV research has been driven in part by these challenges.</p>
+
+<h1 id="problem-definition">Problem definition</h1>
+<p>Benchmark is widely used to verify the performance of the ML approach. Fashion-MNIST, provided by Zalando in 2017, is a popular dataset in computer vision and deep learning. As a result, it is an excellent resource for learning, evaluating, and practicing multiple machine learning and deep learning algorithms.</p>
+<p></p>
+<p>What is the best machine learning approach for classifying Fashion-MNIST data in terms of accuracy and efficiency? Is it still possible to achieve acceptable performance with unsupervised learning if no labels are available? In this project, we will practice some supervised learning and unsupervised learning methods on the FASON-MNIST dataset. We aim to estimate models’ performance with robust test harnesses and improve our basic models with useful strategies. Moreover, we are interested in finding the best model for Fashion-MNIST.</p>
+
+<h1 id="data-collection">Data Collection</h1>
+<p>We started with the original data from Zalando’s article images. It has already been divided into a training set (60,000 images, 85%) and a testing set (10,000 images, 15%) composed of grayscale 28x28 images associated with ten categories. The ten categories include T-shirt/top, Trousers, Pullovers, Dresses, Coats, Sandals, Shirts, Sneakers, Bags, and Ankle Boots. See Figure 1 and Figure 2 for examples.</p>
+<p></p>
+<p>Both training and test datasets comprised image pixels and labeled images. Each row represents one separate image in the training matrix and the test matrix. The first column represents a numeric label for the corresponding article of clothing. Other columns represent pixel numbers for associated images. Next, we extracted labels and pixels. Figure 2 shows the number of samples in each category of the training set. It is apparent from the data that this is a balanced dataset since the number of samples in each category is the same.</p>
+
+<p align="center"> 
+  <img src="/images/fashion.png" alt="Figure 1. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 1. Parts of samples from Fashion-MNIST</p>
+
+<p><br></p>
+
+<p align="center"> 
+  <img src="/images/number_of_samples.png" alt="Figure 2. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 2. Parts of samples from Fashion-MNIST</p>
+
+<p><br></p>
+
+<p align="center"> 
+  <img src="/images/parts_of_sample.png" alt="Figure 3. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 3. Number of samples in each category in the training set</p>
+
+<h1 id="methods">Methods</h1>
+<h2 id="principal-component-analysis">Principal component analysis</h2>
+<p>The principal component analysis is a dimension reduction technique. The method is based on taking advantage of principal directions that contain large variances. The goal is to find several principal directions that cover most variance and use them to transform a dataset. The output dataset will contain significantly fewer dimensions and “unmangle” data points with different labels. It fastens and improves the training of the classification models.</p>
+
+<h2 id="uniform-manifold-approximation-and-projection">Uniform Manifold Approximation and Projection</h2>
+<p>UMAP is a dimension reduction algorithm that uses manifold learning and topological data processing. It uses a local manifold approximation and then extends it to represent the higher dimension of a dataset. Compared to the traditional approaches, like t-SNE, UMAP is more scalable to a large amount of data.</p>
+
+<h2 id="logistic-regression">Logistic regression</h2>
+<p>Logistic regression is a supervised learning algorithm. It is commonly used to solve binary classification or multinomial classification problems. Logistic regression using the Maximum Likelihood Estimation approach for estimation. It sets the mean and variance as parameters to determine the specific values for a given model.</p>
+
+<h2 id="random-forest">Random Forest</h2>
+<p>Random Forest is an ensemble approach which starts with a technique called “decision tree” as a weak learner. It samples N cases at random with replacement to create a subset of the data. Use each subset of the data as input of a seperate decision tree. At each node of a decision tree, randomly choose m predictor variables and calculate the best split based on some objective functions. Aggregate the output of each decision tree based on majority voting or averaging to get the final classification.</p>
+
+<h2 id="support-vector-machines">Support vector machines</h2>
+<p>Support vector machine algorithm is a supervised model which finds the hyperplane that segregates data into two classes. For a dataset that has n features, we will consider an n-dimensional space and plot each data as a point. The best hyperplane would be the one that produces the largest marginal distance between the two segregated classes of data. Compared to other methods, support vector machines can efficiently classify data in high dimensional spaces, as well as handle cases where the number of samples is less than the number of dimensions.</p>
+
+<h2 id="convolutional-neural-networks">Convolutional Neural Networks</h2>
+<p>Convolutional Neural Networks(CNN) is a deep learning neural network that is widely used in computer vision and has become a state of art method in image classification and natural language processing(NLP). The characteristic of CNN is that it has a convolutional layer in the model, which makes it possible to reduce large volumes of image data to small volumes of data while also keeping the characteristics of images. After 2012, Krizhevsky got first place in InageNet Large Scale Visual Recognition Challenge, CNN has attracted more and more attention from researchers. It also shows good performance (accuracy could be 99.6% on MNIST). However, CNN is not perfect. If the layers are too much, the model will become complicated and consumes great computation power and has potential problems of gradients disappearing and degradation.</p>
+
+<h2 id="residual-neural-network">Residual neural network</h2>
+<p>The residual neural network (ResNet) learns residual functions with reference to the layer inputs, instead of learning unreferenced functions. Residual nets utilize hop connections within layers to help layers fit a residual mapping rather than assuming every few layers match the underlying mapping. It is commonly implemented using double- or triple-layer skips with nonlinearities (ReLU) in between and batch normalization. When we increase the number of layers, we may avoid the problem of disappearing gradients and alleviate the Degradation problem by adding a skip connection.</p>
+
+<h1 id="results">Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model\Matrix</th>
+      <th>Accuracy</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1-score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic regression</td>
+      <td>0.8412</td>
+      <td>0.8397</td>
+      <td>0.8412</td>
+      <td>0.8399</td>
+    </tr>
+    <tr>
+      <td>Random forest</td>
+      <td>0.8777</td>
+      <td>0.8767</td>
+      <td>0.8777</td>
+      <td>0.8763</td>
+    </tr>
+    <tr>
+      <td>Support vector machine</td>
+      <td>0.8828</td>
+      <td>0.8823</td>
+      <td>0.8828</td>
+      <td>0.8822</td>
+    </tr>
+    <tr>
+      <td>Convolutional Neural Networks</td>
+      <td>0.8843</td>
+      <td>0.8848</td>
+      <td>0.8843</td>
+      <td>0.8810</td>
+    </tr>
+    <tr>
+      <td>Residual neural network</td>
+      <td>0.8979</td>
+      <td>0.9219</td>
+      <td>0.8979</td>
+      <td>0.8967</td>
+    </tr>
+  </tbody>
+</table>
+
+<p align="center">Table 1. Model performance metrics</p>
+
+<p>Results are shown in Table 1 for three machine learning classification algorithms and two deep learning algorithms. Model performance was evaluated based on accuracy, precision, recall, and F1-score. We conducted hyperparameter tuning as well as model optimization for improving the performance of each model. SVM performed the best among three machine learning algorithms at this stage. For two deep learning algorithms, ResNet performed better than CNN. Details of the results can be found in each part of the model.</p>
+
+<h2 id="principal-component-analysis-1">Principal component analysis</h2>
+
+<p>PCA is applied to the Fashion-MNIST dataset. It is applied to reduce the dimensions for the dataset so we can potentially fasten the training. The amount of variance explained by each of the transformed feature is shown in plot:</p>
+
+<p align="center"> 
+  <img src="/images/cumulative_amount_of_variance_coverage.png" alt="Figure 4. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 4. Cumulative amount of variance coverage </p>
+
+<p align="center"> 
+  <img src="/images/variance_by_features.png" alt="Figure 5. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 5. Variance by features </p>
+
+<p>We can see that the top-100 transformed feature covers ~90% of variance.
+If we reduce the dimension to 3 and present the training data, we get:</p>
+
+<p align="center"> 
+  <img src="/images/3d.png" alt="Figure 6. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 6. 3D plot for 3 features </p>
+
+<p>As you can tell, 3 features are truly not capable of separating out those pictures. They still mangle together. The variance coverage result above also shows that for our dataset, we cannot find a small number of “key” features to group similar images together. To further verify if an unsupervised approach is doable, we apply a Gaussian mixture model to cluster the image preprocessed by PCA. Compared to Kmean, GMM considers variance in the clustering process. We were also attempting to use balanced iterative reduction and clustering using hierarchies (BIRCH) but it doesn’t scale well and our environment can only handle half of the training set. To check the performance of clustering, we use normalized mutual information (NMI). NMI measures how much agreement two arrays of cluster assignments have. It is also applied in Kaggle for evaluating clustering of fashion MNIST. The NMI we get are:</p>
+
+<p align="center"> 
+  <img src="/images/dimension_of_dataset_after_pca_vs_gmm_nmi_of_calassifying.png" alt="Figure 7. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 7. Dimension of dataset after PCA vs GMM NMI of classifying fashion-MNIST</p>
+
+<p>The experiment above shows that PCA and GMM should not be applied to classify pictures. When PCA reduces the dimension of the image, it eliminates noise. But it cannot sufficiently make images with the same label go together. Its NMI is about 53%. Also, larger dimensions don’t necessarily mean better prediction results. We should attempt another dimension reduction and unsupervised learning approach.</p>
+
+<h2 id="uniform-manifold-approximation-and-projection-1">Uniform Manifold Approximation and Projection</h2>
+<p>UMAP is another dimension reduction approach we tried. After reducing the fashion MNIST dataset to 3 dimensions. We get:</p>
+
+<p align="center"> 
+  <img src="/images/3d_umap.png" alt="Figure 9. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 8. 3d UMAP</p>
+
+<p>UMAP split the image much better than PCA. We can see images of several labels are grossly grouped together in different spots. For example, the images of “yellow” labels are put together tightly. That’s good news for clustering. We then try to cluster images processed by UMAP through a Gaussian mixture model. We get:</p>
+
+<p align="center"> 
+  <img src="/images/dimension_of_dataset_after_umap_vs_gmm_nmi_of_classifying.png" alt="Figure 9. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 9. Dimension of dataset after UMAP vs GMM NMI of classifying fashion-MNIST</p>
+
+<p>UMAP improves the quality of unsupervised learning, compared to PCA. We have NMI at about 63%. However, that’s still not good enough for industry. Due to the complexity of image features, the image of different labels can still sometimes mix with each other after UMAP. It is also possible that some images of the same label are in multiple groups that are far apart. Just using 10 clusters is not enough for dealing with such a dataset. If there is more computation resource available, we hope to try hierarchical clustering. Overall, supervised learning is more suitable for fashion MNIST classification than unsupervised learning.</p>
+<p></p>
+<p>Although UMAP cannot turn data into a shape that allows an accurate clustering process, it is still an effective and scalable tool for dimension reduction. It is helpful for training a regression model.</p>
+
+<h2 id="logistic-regression-1">Logistic Regression</h2>
+<p>Analyze accuracy with different regularization values. With C_param_range = [0.001,0.01,0.1,1,10,100], we can get:</p>
+
+<p align="center"> 
+  <img src="/images/lr_with_c_range.png" alt="Figure 10. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 10. Logistic Regression accuracy with different regularization values.</p>
+<p>The accuracy remains as 0.8748 no matter the value of C.</p>
+
+<h2 id="random-forest-1">Random Forest</h2>
+<p>We will experiment on how n_estimators and max_depth affect the accuracy. The graph below shows the relationship between n_estimators and accuracy.</p>
+
+<p align="center"> 
+  <img src="/images/rf_n_estimitator.png" alt="Figure 11. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 11. Random Forest accuracy with different n_estimators.</p>
+
+<p>We can see that as n_estimators increase, the accuracy tends to be stable around 0.877. Next let’s fix the n_estimators as 130 and adjust max_depth. The result is as shown in the graph below.</p>
+
+<p align="center"> 
+  <img src="/images/rf_max_depth.png" alt="Figure 12. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 12. Random Forest accuracy with different max_depth.</p>
+
+<p>We can see the accuracy increases as max_depth increases. The largest accuracy will be 0.877 as all the leave nodes are pure.</p>
+
+<h2 id="support-vector-machine">Support vector machine</h2>
+<p>In order to improve the resulting accuracy, SVM with different parameters are tested. We run the model with the kernel set to ‘rbf’, ‘poly’,  and ‘linear’. With default parameters, rbf produces the highest accuracy of 0.8828, followed by poly which has an accuracy of 0.863, and linear has the lowest accuracy of 0.769. We also tuned the SVM regularization parameter, C, with kernel rbf. The results are illustrated in the table below:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>C value</td>
+      <td>0.6</td>
+      <td>0.8</td>
+      <td>1.0</td>
+      <td>1.2</td>
+      <td>1.4</td>
+      <td>1.6</td>
+      <td>1.8</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>0.8752</td>
+      <td>0.8788</td>
+      <td>0.8828</td>
+      <td>0.8845</td>
+      <td>0.8864</td>
+      <td>0.8880</td>
+      <td>0.8891</td>
+      <td>0.8902</td>
+    </tr>
+  </tbody>
+</table>
+
+<p align="center">Table 2. SVM C and accuracy </p>
+
+<p>The resulting accuracy seems to have a positive relationship with input regularization parameter C. As the C value increases, the accuracy increases as well.</p>
+
+<h2 id="convolutional-neural-networks-1">Convolutional Neural Networks</h2>
+<p>We built a CNN model utilizing PyTorch. The model consists of 2 convolutional layers, each followed by a Rectified Linear Unit (ReLU) layer, a batch normalization layer and a max-pooling layer. In the forward process, we use three linear layers to rebuild our results. The input data is directly from Fashion-MNIST. 60000 for training and 10000 for testing. We have 10 labels so the final output nodes are 10. Loss is evaluated by cross-entropy, the optimizer is SGD and we also train our models with the different batch sizes and learning rates.</p>
+<p></p>
+<p>After tuning the hyperparameters, evaluation shows that batch size has no significant influence on the result. We use a batch size of 128. Learning rate of 0.01 provides a better result. As the training dataset is large, the training converges in about 10 - 15 epochs with a reasonable training time. Before we add the dropout layer, the model shows some overfitting. Dropout layer of ratio 0.2 reduces overfitting successfully. Drop layer also makes the model mode robust. Batch normalization normalizes data before it is input to the next layer. So, it can reduce training time and make the model more generalized.  After adding it, our model performs a little bit better than before. We also tried to add more layers on our model. However, it won’t increase the accuracy significantly. Instead, training time increases a lot. This is a trade-off.</p>
+
+<p align="center"> 
+  <img src="/images/predicted_label.png" alt="Figure 13. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 13. Predicted Label.</p>
+
+<h2 id="residual-neural-network-1">Residual neural network</h2>
+
+<p>In this study, we experimented with 18 layers of the ResNet model using PyTorch. All images were treated the same way by rescaling pixel values from [0, 255] to [0, 1]. The training/test data is the same as out CNN model. Within ResNet, we modified the input layer to take grayscale images and changed the output layer to output ten categories for the Fashion-MNIST dataset. In our project, the hyperparameters of ResNet are batch size, epochs, and learning rate. By tuning these three hyperparameters, we obtained an accuracy of 0.8979 with batch size of 16, epochs of six, and learning rate of 0.0001. This model can classify trousers, sandals, sneakers, bags, and ankle boots well (See Figure 14). There is, however, no way to reliably classify pullovers and shirts, whose numbers of incorrect classifications exceed 200. Furthermore, the model has the highest error rate in identifying shirts.</p>
+
+<p align="center"> 
+  <img src="/images/resnet-wrong-classifications.png" alt="Figure 14. " style="zoom:100%;" align="center">    
+</p>
+<p align="center">Figure 14. The number of wrong classifications in ResNet.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>In the project, we studies two unsupervised learning algorithms and five supervised learning algorithms for Fashion-MNIST. In terms of unsupervised learning, we investigated Principal component analysis (PCA) and Uniform Manifold Approximation and Projection (UMAP) in order to see if it was possible to obtain reliable clustering results even without label information. Based on our results, we would suggest that supervised learning would be more appropriate for this dataset. Neither PCA nor UMAP can generate accurate clusters. In addition, we used GMM after PCA preprocessed the training set. The results indicated that it did not group images well. We would like to explore other unsupervised learning approaches to support our findings in the future.</p>
+<p></p>
+<p>For the supervised learning part, we practiced five algorithms, including three machine learning algorithms and two deep learning algorithms. SVM outperformed the other two machine learning algorithms with an accuracy of 0.8828. The ResNet algorithm outperformed all supervised learning algorithms as well as deep learning algorithms, with an accuracy of 0.8979. Generally, deep learning algorithms outperform machine learning algorithms. Despite the fact that deep learning models have more complex architectures, they are able to discriminate between features from large datasets better than traditional machine learning algorithms.</p>
+
+<h1 id="reference">Reference</h1>
+<p>[1] https://github.com/zalandoresearch/fashion-mnist  <br>
+[2] Wold, Svante, Kim Esbensen, and Paul Geladi. “Principal component analysis.” Chemometrics and intelligent laboratory systems 2.1-3 (1987): 37-52.  <br>
+[3] McInnes, Leland, John Healy, and James Melville. “Umap: Uniform manifold approximation and projection for dimension reduction.” arXiv preprint arXiv:1802.03426 (2018).  <br>
+[4] Hosmer Jr, David W., Stanley Lemeshow, and Rodney X. Sturdivant. Applied logistic regression. Vol. 398. John Wiley &amp; Sons, 2013.<br>
+[5] Svetnik, Vladimir, et al. “Random forest: a classification and regression tool for compound classification and QSAR modeling.” Journal of chemical information and computer sciences 43.6 (2003): 1947-1958.  <br>
+[6] Hearst, Marti A., et al. “Support vector machines.” IEEE Intelligent Systems and their applications 13.4 (1998): 18-28.
+Koushik, Jayanth. “Understanding convolutional neural networks.” arXiv preprint arXiv:1605.09081 (2016).  <br>
+[7] Koushik, Jayanth. “Understanding convolutional neural networks.” arXiv preprint arXiv:1605.09081 (2016).  <br>
+[8] Krizhevsky A, Sutskever I, Hinton G E. “Imagenet classification with deep convolutional neural networks.” Advances in neural information processing systems. 2012.  <br>
+[9] He, Kaiming, et al. “Deep residual learning for image recognition.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.  <br></p>
+
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  
+
+</body></html>
