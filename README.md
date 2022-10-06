@@ -9,3 +9,10 @@ For the scope of this project, we considered an image data set which has real im
 
 ## Problem Definition and Motivation
 Many grocery products are similar in shape and texture, making it difficult for visually impaired people to identify them using touch. Also, they cannot read expiry dates of products, necessary to ensure safe consumption. Thus, we aim to create a system providing audio feedback to such people by identifying the grocery product and the best-before/expiry date if mentioned.
+
+
+## Method
+
+## Potential Results and Discussion
+
+## Reference
