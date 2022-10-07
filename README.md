@@ -1,8 +1,7 @@
 <div align="center">
-  CS-7641: Machine Learning - Group 43
   <h1><b>Machine Learning-Enabled Expiry Date Recognition and Object Classification of Grocery Products</b></h1>
+  CS-7641: Machine Learning - Group 43
 </div>
-
 **Team Members:** Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Sivakumar Nikhil Viswanath, Khochare Janavi
 
 # Introduction and Background
