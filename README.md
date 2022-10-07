@@ -9,6 +9,9 @@ For the scope of this project, we considered an image data set which has real im
 ## Problem Definition and Motivation
 Many grocery products are similar in shape and texture, making it difficult for visually impaired people to identify them using touch. Also, they cannot read expiry dates of products, necessary to ensure safe consumption. Thus, we aim to create a system providing audio feedback to such people by identifying the grocery product and the best-before/expiry date if mentioned.
 
+<div align="center">
+  	<img src="flow_chart_updated.png">
+</div>
 
 ## Method
 The aim of this project is to: 
@@ -17,7 +20,15 @@ The aim of this project is to:
 
 This object classification task is an image classification task based on Transfer Learning. The base CNN model (ResNet-45) is pretrained on the ImageNet dataset (due to its 1000+ images each for an extensive list of classes) and the weights obtained are used in further training the ResNet model on the custom dataset. 
 
+<div align="center">
+  	<img src="Transfer Learning flowchart.png">
+</div>
+
 Using unsupervised learning, we can determine whether an item has expired or not by looking at images of the item. The full framework's architecture is depicted in Figure 1. Our framework is broken up into three sections. The feature extractor and the feature pyramid network (FPN) are used to extract the date region of the input image in the first section, which is referred to as date detection. The day, month, and year components are extracted from the date detection region, which is referred to as the Day-Month-Year Detection section. The third component is referred to as the Recognition Network, and this is where we apply the decoupling attention network (DAN) to recognize handwritten text. 
+
+<div align="center">
+  	<img src="ml_project.drawio (3).png">
+</div>
 
 ## Potential Results and Discussion
 Potential results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
