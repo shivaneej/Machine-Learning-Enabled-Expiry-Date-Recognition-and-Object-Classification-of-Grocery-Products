@@ -46,3 +46,105 @@ A mobile application that demonstrates the working of the models could also be d
 
 # Gantt Chart and Proposed Timeline
 [View File](https://gtvault-my.sharepoint.com/:x:/g/personal/rramachandra7_gatech_edu/Ecd-YPwCuFBDuvu44UX_7J0B0jfClvfIibe9kC5hi7yXXw?e=a2dXz0)
+
+# Contribution Table
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-7btt">Name</th>
+    <th class="tg-7btt">Project Task</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow" rowspan="5">Shivanee Jaiswal </td>
+    <td class="tg-0pky">Problem Definition and Github Page for project proposal</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model Selection for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model Selection and coding for unsupervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Testing and Analysis </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="5">Reshma Ramachandra </td>
+    <td class="tg-0pky">Potential Results and Discussion for proposal </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model coding for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Data preprocessing for unsupervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">UI Integration </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="5">Janavi Khochare </td>
+    <td class="tg-0pky">Method for project proposal </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model coding for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Result evaluation and analysis for unsupervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Testing and analysis </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="5">Srikesh Reddy </td>
+    <td class="tg-0pky">Introduction and background for project proposal </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Data sourcing and cleaning for unsupervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Testing and analysis </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="5">Nikhil Viswanath </td>
+    <td class="tg-0pky">Method for project proposal </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Data preprocessing for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model coding for unsupervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">UI Integration </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
+  </tr>
+</tbody>
+</table>
