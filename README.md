@@ -1,6 +1,5 @@
-# CS-7641: Machine Learning - Group 43
-
 <div align="center">
+  CS-7641: Machine Learning - Group 43
   <h1><b>Machine Learning-Enabled Expiry Date Recognition and Object Classification of Grocery Products</b></h1>
 </div>
 
