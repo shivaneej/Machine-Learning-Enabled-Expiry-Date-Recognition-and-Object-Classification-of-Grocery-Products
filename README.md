@@ -1,6 +1,7 @@
 <div align="center">
-  CS-7641: Machine Learning - Group 43
-  <b>Team Members:</b> Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Sivakumar Nikhil Viswanath, Khochare Janavi
+  <h2>CS-7641: Machine Learning - Group 43</h2><br>
+  <h3>Team Members:</h3> 
+  Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Sivakumar Nikhil Viswanath, Khochare Janavi
 </div>
 
 # Introduction and Background
