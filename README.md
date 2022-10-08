@@ -3,7 +3,7 @@
 </div>
 
 <!-- [Link to video]() -->
-<embed src="https://www.youtube.com/watch?v=zQJS_rvAnV0" width="560" height="315">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zQJS_rvAnV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h3>Team Members:</h3> 
 Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Sivakumar Nikhil Viswanath, Khochare Janavi
