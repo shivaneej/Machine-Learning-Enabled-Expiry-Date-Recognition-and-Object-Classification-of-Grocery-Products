@@ -1,8 +1,12 @@
 <div align="center">
   <h2>CS-7641: Machine Learning - Group 43</h2><br>
-  <h3>Team Members:</h3> 
-  Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Sivakumar Nikhil Viswanath, Khochare Janavi
 </div>
+
+<!-- [Link to video]() -->
+<iframe width="420" height="315" src="https://www.youtube.com/watch?v=zQJS_rvAnV0"></iframe>
+
+<h3>Team Members:</h3> 
+Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Sivakumar Nikhil Viswanath, Khochare Janavi
 
 # Introduction and Background
 Few products can last forever, more so food items. Expiration dates on products serve as an estimate for the healthy usage of the product. It is the date up to which food maintains its biological and physical stability. There are many cases where the information on the product label is hard to read and this is even more true in the case of a visually impaired person. With an increasing need to maintain the food quality standard, this remains an issue which needs to be tackled. 
