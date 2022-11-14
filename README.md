@@ -52,13 +52,13 @@ An example of the image augmentation performed on one of the images is as follow
 
 The augmented images for the above sample image as described in the order above are as shown below:
 <p float="left">
-  <img src="CAKE0000_FLIP_LR.png" width="100" />
-  <img src="CAKE0000_Flip_UP.png" width="100" />
-  <img src="CAKE0000_ROT90.png" width="100" />
-  <img src="CAKE0000_ROT270.png" width="100" />
-  <img src="CAKE0000_SATURATE.png" width="100" />
-  <img src="CAKE0000_BRIGHT.png" width="100" /> 
-  <img src="CAKE0000_GAMMA.png" width="100" />
+  <img src="CAKE0000_FLIP_LR_256x256.png" width="100" />
+  <img src="CAKE0000_Flip_UP_256x256.png" width="100" />
+  <img src="CAKE0000_ROT90_256x256.png" width="100" />
+  <img src="CAKE0000_ROT270_256x256.png" width="100" />
+  <img src="CAKE0000_SATURATE_256x256.png" width="100" />
+  <img src="CAKE0000_BRIGHT_256x256.png" width="100" /> 
+  <img src="CAKE0000_GAMMA_256x256.png" width="100" />
 </p>
 
 # Method
