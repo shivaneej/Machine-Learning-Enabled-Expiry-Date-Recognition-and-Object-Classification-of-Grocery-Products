@@ -35,7 +35,20 @@ An example of image compressed with the help of PCA is as shown below:
   	<img src="OI_RI.png">
 </div>
 
-To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. 
+To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. We tried the following augmentation variations on our images:
+1) Left-Right flip
+2) Up-Down flip
+3) 90° flip
+4) 270° flip
+5) Saturataion adjusted
+6) Brightness adjusted
+7) Gamma adjusted
+
+An example of the image augmentation performed on of the images is as follows:
+
+<div align="center">
+  	<img src="OI_RI.png">
+</div>
 
 # Method
 The aim of this project is to: 
