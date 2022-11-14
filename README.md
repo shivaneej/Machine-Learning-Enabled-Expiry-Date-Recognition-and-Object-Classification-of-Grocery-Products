@@ -35,14 +35,14 @@ An example of image compressed with the help of PCA is as shown below:
   	<img src="OI_RI.png">
 </div>
 
-To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. We tried the following augmentation variations on our images:
-1) Left-Right flip
-2) Up-Down flip
-3) 90° flip
-4) 270° flip
-5) Saturataion adjusted
-6) Brightness adjusted
-7) Gamma adjusted
+To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. We tried the following augmentation variations on our images: <br>
+1) Left-Right flip <br>
+2) Up-Down flip <br>
+3) 90° flip <br>
+4) 270° flip <br>
+5) Saturataion adjusted <br>
+6) Brightness adjusted <br>
+7) Gamma adjusted <br>
 
 An example of the image augmentation performed on one of the images is as follows. The original image is as follows:
 
@@ -60,6 +60,21 @@ The augmented images for the above sample image as described in the order above 
   <img src="CAKE0000_BRIGHT_256x256.png" width="100"/> 
   <img src="CAKE0000_GAMMA_256x256.png" width="100"/>
 </p>
+
+| No. | Class      | No.of images before augmentation | No.of images after augmentation |
+|-----|------------|----------------------------------|---------------------------------|
+| 1.  | Dairy      | 1412                             | 11296                           |
+| 2.  | Fruits     | 2370                             | 18960                           |
+| 3.  | Vegetables | 1306                             | 10448                           |
+| 4.  | Snacks     | 1021                             | 8168                            |
+| 5.  | Beverages  | 1591                             | 12728                           |
+| 6.  | Others     | 2704                             | 21632                           |
+
+
+| No. | Class    | No.of images before augmentation | No.of images after augmentation |
+|-----|----------|----------------------------------|---------------------------------|
+| 1.  | Products | 1700                             | 6800                            |
+| 2.  | Date     | 510                              | 2040                            |
 
 # Method
 
