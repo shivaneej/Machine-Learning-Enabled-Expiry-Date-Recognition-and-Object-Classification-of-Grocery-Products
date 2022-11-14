@@ -53,7 +53,7 @@ An example of the image augmentation performed on one of the images is as follow
 # Method
 
 In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages and Others. We used the following metrics for our classification:
-1) Precision
+1) Precision <br>
 2) Recall
 3) F1 score
 4) Accuracy
