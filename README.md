@@ -68,7 +68,7 @@ An example of the image augmentation performed on one of the images is as follow
   <div align="left">
     <figure>
       <img src="CAKE_0000_ROT90.png">
-      <figcaption>90 &#176; rotated image</figcaption>
+      <figcaption>90&#176; rotated image</figcaption>
     </figure>
   </div>
 </div> 
@@ -76,7 +76,7 @@ An example of the image augmentation performed on one of the images is as follow
   <div align="left">
     <figure>
       <img src="CAKE_0000_ROT270.png">
-      <figcaption>270 &#176; rotated image</figcaption>
+      <figcaption>270&#176; rotated image</figcaption>
     </figure>
   </div>
   <div align="left">
