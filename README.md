@@ -46,27 +46,26 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 
 An example of the image augmentation performed on one of the images is as follows.:
 
-An example of the image augmentation performed on one of the images is as follows:
 <div align="row">
-  <div align="column">
+  <div align="left">
     <figure>
       <img src="CAKE_0000.png">
       <figcaption>Original image</figcaption>
     </figure>      
   </div>
-  <div align="column">
+  <div align="left">
     <figure>
       <img src="CAKE_0000_LR.png">
       <figcaption>Left-right flipped image</figcaption>
     </figure>
   </div>
-  <div align="column">
+  <div align="left">
     <figure>
       <img src="CAKE_0000_UP.png">
       <figcaption>Up-down flipped image</figcaption>
     </figure>
   </div>
-  <div align="column">
+  <div align="left">
     <figure>
       <img src="CAKE_0000_ROT90.png">
       <figcaption>90 &#176; rotated image</figcaption>
