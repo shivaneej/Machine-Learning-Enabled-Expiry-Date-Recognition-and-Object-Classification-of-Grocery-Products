@@ -19,7 +19,8 @@ For the scope of this project, we considered an image data set which has images 
 Many grocery products are similar in shape and texture, making it difficult for visually impaired people to identify them using touch. Also, they cannot read expiry dates of products, necessary to ensure safe consumption. Thus, we aim to create a system providing audio feedback to such people by identifying the grocery product and the best-before/expiry date if mentioned.
 
 <div align="center">
-  	<img src="flow_chart_updated.png">
+  	<img src="flow_chart_updated.png"> <br>
+    <em>Flow chart of the project </em>
 </div>
 
 # Data Collection and Preprocessing
@@ -32,7 +33,8 @@ For all the images in our dataset, we first started with an image compresssion w
 An example of image compressed with the help of PCA is as shown below:
 
 <div align="center">
-  	<img src="OI_RI.png">
+  	<img src="OI_RI.png"><br>
+    <em>Image Reduction with PCA </em>
 </div>
 
 To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. We tried the following augmentation variations on our images: <br>
@@ -48,6 +50,7 @@ An example of the image augmentation performed on one of the images is as follow
 
 <div align="center">
   	<img src="CAKE0000.png">
+    <em>Sample image from the dataset </em>
 </div>
 
 The augmented images for the above sample image as described in the order above are as shown below:
@@ -70,6 +73,7 @@ The augmented images for the above sample image as described in the order above 
 | 5.  | Beverages  | 1591                             | 12728                           |
 | 6.  | Others     | 2704                             | 21632                           |
 
+<br>
 
 # Method
 
