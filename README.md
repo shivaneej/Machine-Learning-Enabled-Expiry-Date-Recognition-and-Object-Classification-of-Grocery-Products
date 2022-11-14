@@ -103,13 +103,27 @@ Using unsupervised learning, we can determine whether an item has expired or not
 The performance of the model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the dataset used for this classification model was comparatively very small. Thus, increasing the dataset size by collecting new data and performing more augmentation could be the key to fix the overfitting problem.
 
 <div align="center">
-  	<img src="Results_1.png">
+  	<img src="Results_1.png"> <br>
     <em>Classification Model performance on augmented dataset</em>
 </div>
 
 <div align="center">
-  	<img src="Results_2.png">
+  	<img src="Results_2.png"> <br>
     <em>Classification Model performance on augmented dataset</em>
+</div>
+
+Evaluation metrics for the classification model:
+1) Training Accuracy: 97.55%
+2) Validation Accuracy: 96.80%
+3) Precision: 82.66%
+4) Recall: 98%
+5) F1 Score: 91.03%
+
+The below images show the sample outputs for some images for which the model predicts the right classes. However, for some images, the model failed to predict the right class which is to be expected from the overfitting problem. For example, the fourth image of apples in a supermarket is predicted to belong to the packed class by the trained model. For the particular use-case of expiry date detection, this image of apples would not be considered to be packed since it has no expiry date to detect. Thus, such edge cases should also be dealt with in the next half. 
+
+<div align="center">
+  	<img src="Results_3.png"> <br>
+    <em>Model classification performance on some samples</em>
 </div>
 
 
