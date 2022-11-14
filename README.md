@@ -27,10 +27,12 @@ The data for the project was obtained from 2 different sources:
 1) The dataset for image classification was obtained from "The Freiburg Groceries Dataset" which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
 2) The dataset for date detection was obtained from "ExpDate" dataset which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
 
-For all the images in our dataset, we first started with an image compresssion with the help of PCA. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around xx% of the variation in our original image.
+For all the images in our dataset, we first started with an image compresssion with the help of PCA. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
+
+An example of image compressed with the help of PCA is as shown below:
 
 <div align="center">
-  	<img src="Original_image.png">
+  	<img src="OI_RI.png">
 </div>
 
 To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. 
