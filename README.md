@@ -24,10 +24,10 @@ Many grocery products are similar in shape and texture, making it difficult for 
 
 # Data Collection and Preprocessing
 The data for the project was obtained from 2 different sources:
-1. The dataset for image classification was obtained from "The Freiburg Groceries Dataset"[6] which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
-2. The dataset for date detection was obtained from "ExpDate" dataset[5] which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
+1) The dataset for image classification was obtained from "The Freiburg Groceries Dataset" which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
+2) The dataset for date detection was obtained from "ExpDate" dataset which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
 
-For all the images in our dataset, we first started with an image compresssion with the help of PCA[7]. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
+For all the images in our dataset, we first started with an image compresssion with the help of PCA. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
 
 An example of image compressed with the help of PCA is as shown below:
 
@@ -52,13 +52,13 @@ An example of the image augmentation performed on one of the images is as follow
 
 The augmented images for the above sample image as described in the order above are as shown below:
 <p float="left">
-  <img src="CAKE0000_FLIP_LR_256x256.png" width="100" />
-  <img src="CAKE0000_Flip_UP_256x256.png" width="100" />
-  <img src="CAKE0000_ROT90_256x256.png" width="100" />
-  <img src="CAKE0000_ROT270_256x256.png" width="100" />
-  <img src="CAKE0000_SATURATE_256x256.png" width="100" />
-  <img src="CAKE0000_BRIGHT_256x256.png" width="100" /> 
-  <img src="CAKE0000_GAMMA_256x256.png" width="100" />
+  <img src="CAKE0000_FLIP_LR.png" width="100" />
+  <img src="CAKE0000_Flip_UP.png" width="100" />
+  <img src="CAKE0000_ROT90.png" width="100" />
+  <img src="CAKE0000_ROT270.png" width="100" />
+  <img src="CAKE0000_SATURATE.png" width="100" />
+  <img src="CAKE0000_BRIGHT.png" width="100" /> 
+  <img src="CAKE0000_GAMMA.png" width="100" />
 </p>
 
 # Method
@@ -112,11 +112,10 @@ A mobile application that demonstrates the working of the models could also be d
 2. Minyoung Huh, Pulkit Agrawal, Alexei A. Efros, “What makes ImageNet good for transfer learning?”, [https://doi.org/10.48550/arXiv.1608.08614](https://doi.org/10.48550/arXiv.1608.08614).
 3. E. Peng, P. Peursum and L. Li, "Product Barcode and Expiry Date Detection for the Visually Impaired Using a Smartphone," 2012 International Conference on Digital Image Computing Techniques and Applications (DICTA), 2012, pp. 1-7, doi: 10.1109/DICTA.2012.6411673. 
 4. Ashino, M., Takeuchi, Y. (2020). Expiry-Date Recognition System Using Combination of Deep Neural Networks for Visually Impaired. In: Miesenberger, K., Manduchi, R., Covarrubias Rodriguez, M., Peňáz, P. (eds) Computers Helping People with Special Needs. ICCHP 2020. Lecture Notes in Computer Science, vol 12376. Springer, Cham. [https://doi.org/10.1007/978-3-030-58796-3_58](https://doi.org/10.1007/978-3-030-58796-3_58).
-5. Marcus Klasson, Cheng Zhang, Hedvig Kjellström, "A Hierarchical Grocery Store Image Dataset with Visual and Semantic Labels", https://doi.org/10.48550/arXiv.1901.00711
-6. Philipp Jund, Nichola Abdo, Andreas Eitel, Wolfram Burgard, "The Freiburg Groceries Dataset", https://doi.org/10.48550/arXiv.1611.05799
-7. Mudrová, Martina and Aleš Procházka. “PRINCIPAL COMPONENT ANALYSIS IN IMAGE PROCESSING.” (2005).
-8. Nsang, Augustine & Bello, A.M. & Shamsudeen, Hammed. (2015). Image reduction using assorted dimensionality reduction techniques. 1353. 139-146.
-9. Patel, Chirag & Patel, Atul & Patel, Dharmendra. (2012). Optical Character Recognition by Open source OCR Tool Tesseract: A Case Study. International Journal of Computer Applications. 55. 50-56. 10.5120/8794-2784.
+5. Philipp Jund, Nichola Abdo, Andreas Eitel, Wolfram Burgard, "The Freiburg Groceries Dataset", https://doi.org/10.48550/arXiv.1611.05799
+6. Mudrová, Martina and Aleš Procházka. “PRINCIPAL COMPONENT ANALYSIS IN IMAGE PROCESSING.” (2005).
+7. Nsang, Augustine & Bello, A.M. & Shamsudeen, Hammed. (2015). Image reduction using assorted dimensionality reduction techniques. 1353. 139-146.
+8. Patel, Chirag & Patel, Atul & Patel, Dharmendra. (2012). Optical Character Recognition by Open source OCR Tool Tesseract: A Case Study. International Journal of Computer Applications. 55. 50-56. 10.5120/8794-2784.
 
 # Gantt Chart and Proposed Timeline
 [View File](https://gtvault-my.sharepoint.com/:x:/g/personal/rramachandra7_gatech_edu/Ecd-YPwCuFBDuvu44UX_7J0B0jfClvfIibe9kC5hi7yXXw?e=a2dXz0)
@@ -141,97 +140,56 @@ A mobile application that demonstrates the working of the models could also be d
 </thead>
 <tbody>
   <tr>
-    <td class="tg-c3ow" rowspan="5">Shivanee Jaiswal </td>
-    <td class="tg-0pky">Problem Definition and Github Page for project proposal</td>
+    <td class="tg-c3ow" rowspan="3">Shivanee Jaiswal </td>
+    <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model Selection for supervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Model Selection and coding for unsupervised learning </td>
-    <td class="tg-0pky">Project Report </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Testing and Analysis </td>
     <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Supervised Learning - Image date detection </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="5">Reshma Ramachandra </td>
-    <td class="tg-0pky">Potential Results and Discussion for proposal </td>
+    <td class="tg-c3ow" rowspan="3">Reshma Ramachandra </td>
+    <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model coding for supervised learning </td>
-    <td class="tg-0pky">Project Report </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Data preprocessing for unsupervised learning </td>
     <td class="tg-0pky">Unsupervised Learning - Product Classification </td>
   </tr>
   <tr>
-    <td class="tg-0pky">UI Integration </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="5">Janavi Khochare </td>
-    <td class="tg-0pky">Method for project proposal </td>
+    <td class="tg-c3ow" rowspan="3">Janavi Khochare </td>
+    <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model coding for supervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Result evaluation and analysis for unsupervised learning </td>
-    <td class="tg-0pky">Project Report </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Testing and analysis </td>
     <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Supervised learning - Date detection </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="5">Srikesh Reddy </td>
-    <td class="tg-0pky">Introduction and background for project proposal </td>
-    <td class="tg-0pky">Project Report </td>
+    <td class="tg-c3ow" rowspan="3">Srikesh Reddy </td>
+    <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Data sourcing and cleaning for unsupervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Testing and analysis </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="5">Nikhil Viswanath </td>
-    <td class="tg-0pky">Method for project proposal </td>
+    <td class="tg-c3ow" rowspan="3">Nikhil Viswanath </td>
+    <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Data preprocessing for supervised learning </td>
-    <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model coding for unsupervised learning </td>
     <td class="tg-0pky">Image augmentation </td>
   </tr>
   <tr>
-    <td class="tg-0pky">UI Integration </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
   </tr>
 </tbody>
