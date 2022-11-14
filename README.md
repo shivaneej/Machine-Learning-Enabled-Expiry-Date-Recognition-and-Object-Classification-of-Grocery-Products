@@ -9,6 +9,7 @@ Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Si
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zQJS_rvAnV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<br>
 
 # Introduction and Background
 Few products can last forever, more so food items. Expiration dates on products serve as an estimate for the healthy usage of the product. It is the date up to which food maintains its biological and physical stability. There are many cases where the information on the product label is hard to read and this is even more true in the case of a visually impaired person. With an increasing need to maintain the food quality standard, this remains an issue which needs to be tackled. 
@@ -22,6 +23,7 @@ Many grocery products are similar in shape and texture, making it difficult for 
   	<img src="flow_chart_updated.png"> <br>
     <em>Flow chart of the project </em>
 </div>
+<br>
 
 # Data Collection and Preprocessing
 The data for the project was obtained from 2 different sources:
@@ -42,7 +44,7 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 2) Up-Down flip <br>
 3) 90° flip <br>
 4) 270° flip <br>
-5) Saturataion adjusted <br>
+5) Saturation adjusted <br>
 6) Brightness adjusted <br>
 7) Gamma adjusted <br>
 
@@ -52,6 +54,7 @@ An example of the image augmentation performed on one of the images is as follow
   	<img src="CAKE0000.png"><br>
     <em>Sample image from the dataset </em>
 </div>
+<br>
 
 The augmented images for the above sample image as described in the order above are as shown below:
 <p float="left">
@@ -83,6 +86,7 @@ In our first part of the project, we have performed a image classification of th
   	<img src="Transfer Learning flowchart.drawio.png"><br>
     <em>Transfer Learning Framework </em>
 </div>
+<br>
 
 The Object Classification model classifies the products into seven different classes, Beverages, Fruits, Vegetables, Snacks, Dairy, Others and Packed (which is the ExpDate dataset) using a supervised learning approach. This approach [10] uses Transfer Learning where the weights of the classification neural network are obtained from a pretrained model which in this case is the ResNet50 model trained on the ImageNet [2] dataset. Then ResNet50 is used on top of the custom CNN layer for classification. The ResNet50 architecture includes 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer. ResNet50 is used here because it makes it possible to train ultra deep neural networks. A network can contain hundreds or thousands of layers and still achieve great performance due to residual networks. ResNets have a deep residual learning framework containing shortcut connections that simply perform identity mappings. The advantage of such identity mappings is that without any additional parameters added to the model and without increasing computational time, the performance is improved. Compared to other ResNets, ResNet50 has a few changes, the shortcut connections previously skipped two layers but now they skip three layers and presence of 1 x 1 convolution layers in between. The learning rate was set to be 0.01. Batch learning was used with a batch size of 32. 
 
@@ -90,6 +94,7 @@ The Object Classification model classifies the products into seven different cla
   	<img src="model-architecture.png"> <br>
     <em>ResNet50 model architecture used for Object Classification</em>
 </div>
+<br>
 
 Once we have the image classified, the next step is to detect the probable bounding box of expiry date for a packed product. We will be using a supervised model for the localization of the bounding box. For this we plan to use images of the "ExpDate" dataset which consists of packed products along with the co-ordinates of bounding boxes of dates. After this, we will crop the image as per the coodinates of the bounding box and use Optical Character Recognition (OCR)[9] on this cropped image to detect the date.
 
@@ -99,6 +104,7 @@ For, the cropping and date extraction process using OCR, we started with convert
   	<img src="ocr-image.jpg"><br>
     <em>OCR output </em>
 </div>
+<br>
 
 <!-- The aim of this project is to: 
 * Identify the product using object classification (supervised learning) 
@@ -125,6 +131,7 @@ The performance of the model is shown below with respect to its test and validat
   	<img src="Results_2.png"> <br>
     <em>Model loss performance on augmented dataset</em>
 </div>
+<br>
 
 Evaluation metrics for the classification model: <br>
 1) Training Accuracy: 97.55% <br>
@@ -139,6 +146,7 @@ The below images show the sample outputs for some images for which the model pre
   	<img src="Results_3.png"> <br>
     <em>Model classification performance on some samples</em>
 </div>
+<br>
 
 <!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
