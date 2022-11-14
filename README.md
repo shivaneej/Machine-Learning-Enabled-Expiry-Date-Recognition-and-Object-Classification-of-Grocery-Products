@@ -141,52 +141,96 @@ A mobile application that demonstrates the working of the models could also be d
 <tbody>
   <tr>
     <td class="tg-c3ow" rowspan="5">Shivanee Jaiswal </td>
+    <td class="tg-0pky">Problem Definition and Github Page for project proposal</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model Selection for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model Selection and coding for unsupervised learning </td>
     <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Testing and Analysis </td>
     <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Supervised Learning - Image date detection </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Reshma Ramachandra </td>
+    <td class="tg-0pky">Potential Results and Discussion for proposal </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model coding for supervised learning </td>
     <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Data preprocessing for unsupervised learning </td>
     <td class="tg-0pky">Unsupervised Learning - Product Classification </td>
   </tr>
   <tr>
+    <td class="tg-0pky">UI Integration </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Janavi Khochare </td>
+    <td class="tg-0pky">Method for project proposal </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Model coding for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Result evaluation and analysis for unsupervised learning </td>
     <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Testing and analysis </td>
     <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Supervised learning - Date detection </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Srikesh Reddy </td>
+    <td class="tg-0pky">Introduction and background for project proposal </td>
     <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Data sourcing and cleaning for unsupervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Testing and analysis </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Nikhil Viswanath </td>
+    <td class="tg-0pky">Method for project proposal </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Data preprocessing for supervised learning </td>
     <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Model coding for unsupervised learning </td>
     <td class="tg-0pky">Image augmentation </td>
   </tr>
   <tr>
+    <td class="tg-0pky">UI Integration </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Evaluation </td>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
   </tr>
 </tbody>
