@@ -50,10 +50,10 @@ An example of the image augmentation performed on one of the images is as follow
   	<img src="CAKE0000.png">
 </div>
 
-<p float="left">
-  <img src="CAKE0000.png" width="100" />
-  <img src="CAKE0000_BRIGHT.png" width="100" /> 
-  <img src="CAKE0000_FLIP_LR.png" width="100" />
+<p float="center">
+  <img src="CAKE0000.png" width="200" />
+  <img src="CAKE0000_BRIGHT.png" width="200" /> 
+  <img src="CAKE0000_FLIP_LR.png" width="200" />
 </p>
 
 # Method
