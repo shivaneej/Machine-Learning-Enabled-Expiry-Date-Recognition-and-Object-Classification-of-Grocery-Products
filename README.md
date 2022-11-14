@@ -104,12 +104,12 @@ The performance of the model is shown below with respect to its test and validat
 
 <div align="center">
   	<img src="Results_1.png"> <br>
-    <em>Classification Model performance on augmented dataset</em>
+    <em>Model accuracy performance on augmented dataset</em>
 </div>
 
 <div align="center">
   	<img src="Results_2.png"> <br>
-    <em>Classification Model performance on augmented dataset</em>
+    <em>Model loss performance on augmented dataset</em>
 </div>
 
 Evaluation metrics for the classification model:
@@ -125,23 +125,6 @@ The below images show the sample outputs for some images for which the model pre
   	<img src="Results_3.png"> <br>
     <em>Model classification performance on some samples</em>
 </div>
-
-
-We used the following metrics for our classification:
-1) Precision
-2) Recall
-3) F1 score
-4) Accuracy
-
-The confusion matrix for the classification problem in hand is as shown below:
-
-*XXX confusion matrix image XXX*
-
-The values of above reported metrics for our classification problem are as follows:
-Precision = 
-Recall = 
-F1 score = 
-Accuracy =
 
 <!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
