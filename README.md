@@ -58,19 +58,19 @@ An example of the image augmentation performed on one of the images is as follow
       <figure>
       <img src="CAKE_0000_LR.png">
       <figcaption>Left-right flipped image</figcaption>
-    </figure
+    </figure>
   </div>
   <div align="column">
       <figure>
       <img src="CAKE_0000_UP.png">
       <figcaption>Up-down flipped image</figcaption>
-    </figure
+    </figure>
   </div>
   <div align="column">
       <figure>
       <img src="CAKE_0000_ROT90.png">
       <figcaption>90 &#176; rotated image</figcaption>
-    </figure
+    </figure>
   </div>
 </div> 
 <div align="row">
@@ -78,25 +78,25 @@ An example of the image augmentation performed on one of the images is as follow
       <figure>
       <img src="CAKE_0000_ROT270.png">
       <figcaption>270 &#176; rotated image</figcaption>
-    </figure
+    </figure>
   </div>
   <div align="left">
       <figure>
       <img src="CAKE_0000_SATURATED.png">
       <figcaption>Saturation adjusted image</figcaption>
-    </figure
+    </figure>
   </div>
   <div align="left">
       <figure>
       <img src="CAKE_0000_BRIGHT.png">
       <figcaption>Brightness adjusted image</figcaption>
-    </figure
+    </figure>
   </div>
   <div align="left">
       <figure>
       <img src="CAKE_0000_GAMMA.png">
       <figcaption>Gamma Corrected image</figcaption>
-    </figure
+    </figure>
   </div>
 </div>
 
