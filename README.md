@@ -44,78 +44,26 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 6) Brightness adjusted
 7) Gamma adjusted
 
-An example of the image augmentation performed on one of the images is as follows.:
+An example of the image augmentation performed on one of the images is as follows. The original image is as follows:
 
-<div align="row">
-  <div align="left">
-    <figure>
-      <img src="CAKE0000.png">
-      <figcaption>Original image</figcaption>
-    </figure>      
-  </div>
-  <div align="left">
-    <figure>
-      <img src="CAKE0000.png">
-      <figcaption>Left-right flipped image</figcaption>
-    </figure>
-  </div>
-  <div align="left">
-    <figure>
-      <img src="CAKE0000_Flip_UP.png">
-      <figcaption>Up-down flipped image</figcaption>
-    </figure>
-  </div>
-  <div align="left">
-    <figure>
-      <img src="CAKE0000_ROT90.png">
-      <figcaption>90&#176; rotated image</figcaption>
-    </figure>
-  </div>
-</div> 
-<div align="row">
-  <div align="left">
-    <figure>
-      <img src="CAKE0000_ROT270.png">
-      <figcaption>270&#176; rotated image</figcaption>
-    </figure>
-  </div>
-  <div align="left">
-    <figure>
-      <img src="CAKE0000_SATURATE.png">
-      <figcaption>Saturation adjusted image</figcaption>
-    </figure>
-  </div>
-  <div align="left">
-    <figure>
-      <img src="CAKE0000_BRIGHT.png">
-      <figcaption>Brightness adjusted image</figcaption>
-    </figure>
-  </div>
-  <div align="left">
-    <figure>
-      <img src="CAKE0000_GAMMA.png">
-      <figcaption>Gamma Corrected image</figcaption>
-    </figure>
-  </div>
+<div align="center">
+  	<img src="CAKE0000.png">
 </div>
+
+The augmented images for the above sample image as described in the order above are as shown below:
+<p float="left">
+  <img src="CAKE0000_FLIP_LR.png" width="100" />
+  <img src="CAKE0000_Flip_UP.png" width="100" />
+  <img src="CAKE0000_ROT90.png" width="100" />
+  <img src="CAKE0000_ROT270.png" width="100" />
+  <img src="CAKE0000_SATURATE.png" width="100" />
+  <img src="CAKE0000_BRIGHT.png" width="100" /> 
+  <img src="CAKE0000_GAMMA.png" width="100" />
+</p>
 
 # Method
 
-In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages and Others. We used the following metrics for our classification:
-1) Precision <br>
-2) Recall
-3) F1 score
-4) Accuracy
-
-The confusion matrix for the classification problem in hand is as shown below:
-
-**XXX confusion matrix image XXX**
-
-The values of above reported metrics for our classification problem are as follows:
-Precision = 
-Recall = 
-F1 score = 
-Accuracy =
+In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages and Others.
 
 For the second part of the project, we started with the image compression of the products using a PCA. 
 
@@ -136,6 +84,22 @@ Using unsupervised learning, we can determine whether an item has expired or not
 </div>
 
 # Results and Discussion
+
+We used the following metrics for our classification:
+1) Precision
+2) Recall
+3) F1 score
+4) Accuracy
+
+The confusion matrix for the classification problem in hand is as shown below:
+
+*XXX confusion matrix image XXX*
+
+The values of above reported metrics for our classification problem are as follows:
+Precision = 
+Recall = 
+F1 score = 
+Accuracy =
 
 <!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
@@ -177,83 +141,53 @@ A mobile application that demonstrates the working of the models could also be d
 <tbody>
   <tr>
     <td class="tg-c3ow" rowspan="5">Shivanee Jaiswal </td>
-    <td class="tg-0pky">Problem Definition and Github Page for project proposal</td>
+    <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model Selection for supervised learning </td>
+    <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model Selection and coding for unsupervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Testing and Analysis </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
+    <td class="tg-0pky">Supervised Learning - Image date detection </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Reshma Ramachandra </td>
-    <td class="tg-0pky">Potential Results and Discussion for proposal </td>
+    <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model coding for supervised learning </td>
+    <td class="tg-0pky">Unsupervised Learning - Product Classification </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Data preprocessing for unsupervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">UI Integration </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
+    <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Janavi Khochare </td>
-    <td class="tg-0pky">Method for project proposal </td>
+    <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model coding for supervised learning </td>
+    <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Result evaluation and analysis for unsupervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Testing and analysis </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
+    <td class="tg-0pky">Supervised learning - Date detection </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Srikesh Reddy </td>
-    <td class="tg-0pky">Introduction and background for project proposal </td>
+    <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Data sourcing and cleaning for unsupervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Testing and analysis </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
+    <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="5">Nikhil Viswanath </td>
-    <td class="tg-0pky">Method for project proposal </td>
+    <td class="tg-0pky">Project Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Data preprocessing for supervised learning </td>
+    <td class="tg-0pky">Image augmentation </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Model coding for unsupervised learning </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">UI Integration </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Evaluation </td>
+    <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
   </tr>
 </tbody>
 </table>
