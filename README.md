@@ -52,22 +52,7 @@ An example of the image augmentation performed on one of the images is as follow
 
 # Method
 
-In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages and Others. We used the following metrics for our classification:
-1) Precision
-2) Recall
-3) F1 score
-4) Accuracy
-
-The confusion matrix for the classification problem in hand is as shown below:
-
-**XXX confusion matrix image XXX**
-
-The values of above reported metrics for our classification problem are as follows:
-Precision = 
-Recall = 
-F1 score = 
-Accuracy =
-
+In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages, Dairy and Others. 
 For the second part of the project, we started with the image compression of the products using a PCA. 
 
 <!-- The aim of this project is to: 
@@ -87,6 +72,23 @@ Using unsupervised learning, we can determine whether an item has expired or not
 </div>
 
 # Results and Discussion
+
+We used the following metrics for our classification:
+1) Precision
+2) Recall
+3) F1 score
+4) Accuracy
+
+The confusion matrix for the classification problem in hand is as shown below:
+
+**XXX confusion matrix image XXX**
+
+The values of above reported metrics for our classification problem are as follows:
+Precision = 
+Recall = 
+F1 score = 
+Accuracy =
+
 
 <!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
