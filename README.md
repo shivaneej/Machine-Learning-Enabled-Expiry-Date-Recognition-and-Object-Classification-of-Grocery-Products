@@ -44,21 +44,21 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 6) Brightness adjusted
 7) Gamma adjusted
 
-An example of the image augmentation performed on one of the images is as follows:
+An example of the image augmentation performed on one of the images is as follows. The original image is as follows:
 
 <div align="center">
   	<img src="CAKE0000.png">
 </div>
 
+The augmented images for the above sample image are as shown below:
 <p float="center">
-  <img src="CAKE0000.png" width="200" />
-  <img src="CAKE0000_FLIP_LR.png" width="200" />
-  <img src="CAKE0000_Flip_UP.png" width="200" />
-  <img src="CAKE0000_ROT90.png" width="200" />
-  <img src="CAKE0000_ROT270.png" width="200" />
-  <img src="CAKE0000_SATURATE.png" width="200" />
-  <img src="CAKE0000_BRIGHT.png" width="200" /> 
-  <img src="CAKE0000_GAMMA.png" width="200" />
+  <img src="CAKE0000_FLIP_LR.png" width="100" />
+  <img src="CAKE0000_Flip_UP.png" width="100" />
+  <img src="CAKE0000_ROT90.png" width="100" />
+  <img src="CAKE0000_ROT270.png" width="100" />
+  <img src="CAKE0000_SATURATE.png" width="100" />
+  <img src="CAKE0000_BRIGHT.png" width="100" /> 
+  <img src="CAKE0000_GAMMA.png" width="100" />
 </p>
 
 # Method
