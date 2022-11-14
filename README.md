@@ -55,7 +55,7 @@ An example of the image augmentation performed on one of the images is as follow
   </div>
   <div align="left">
     <figure>
-      <img src="CAKE0000_Flip_LR.png">
+      <img src="CAKE0000.png">
       <figcaption>Left-right flipped image</figcaption>
     </figure>
   </div>
