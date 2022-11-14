@@ -30,7 +30,7 @@ The data for the project was obtained from 2 different sources:
 1. The dataset for image classification was obtained from "The Freiburg Groceries Dataset"[6] which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
 2. The dataset for date detection was obtained from "ExpDate" dataset[5] which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
 
-For all the images in our dataset, we first started with an image compresssion with the help of Principal Component Analysis (PCA)[7][8]. The dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our model's training time. So in order to reduce the training time, we used Principal Component Analysis (PCA) technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
+For all the images in our dataset, we first started with an image compresssion with the help of Principal Component Analysis (PCA)[7][8]. The dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our model's training time. The real world test images could also be of poor quality and the model would perform better if trained on similar images. So in order to reduce the training time and increase the accuracy, we used Principal Component Analysis (PCA) technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
 
 An example of image compressed with the help of PCA is as shown below:
 
@@ -76,6 +76,7 @@ The augmented images for the above sample image as described in the order above 
 | 4.  | Snacks     | 1021                             | 8168                            |
 | 5.  | Beverages  | 1591                             | 12728                           |
 | 6.  | Others     | 2704                             | 21632                           |
+
 <br>
 
 # Method
@@ -159,12 +160,12 @@ A mobile application that demonstrates the working of the models could also be d
 2. Minyoung Huh, Pulkit Agrawal, Alexei A. Efros, “What makes ImageNet good for transfer learning?”, [https://doi.org/10.48550/arXiv.1608.08614](https://doi.org/10.48550/arXiv.1608.08614).
 3. E. Peng, P. Peursum and L. Li, "Product Barcode and Expiry Date Detection for the Visually Impaired Using a Smartphone," 2012 International Conference on Digital Image Computing Techniques and Applications (DICTA), 2012, pp. 1-7, doi: 10.1109/DICTA.2012.6411673. 
 4. Ashino, M., Takeuchi, Y. (2020). Expiry-Date Recognition System Using Combination of Deep Neural Networks for Visually Impaired. In: Miesenberger, K., Manduchi, R., Covarrubias Rodriguez, M., Peňáz, P. (eds) Computers Helping People with Special Needs. ICCHP 2020. Lecture Notes in Computer Science, vol 12376. Springer, Cham. [https://doi.org/10.1007/978-3-030-58796-3_58](https://doi.org/10.1007/978-3-030-58796-3_58).
-5. Marcus Klasson, Cheng Zhang, Hedvig Kjellström, "A Hierarchical Grocery Store Image Dataset with Visual and Semantic Labels", https://doi.org/10.48550/arXiv.1901.00711
-6. Philipp Jund, Nichola Abdo, Andreas Eitel, Wolfram Burgard, "The Freiburg Groceries Dataset", https://doi.org/10.48550/arXiv.1611.05799
+5. Marcus Klasson, Cheng Zhang, Hedvig Kjellström, "A Hierarchical Grocery Store Image Dataset with Visual and Semantic Labels", [https://doi.org/10.48550/arXiv.1901.00711](https://doi.org/10.48550/arXiv.1901.00711)
+6. Philipp Jund, Nichola Abdo, Andreas Eitel, Wolfram Burgard, "The Freiburg Groceries Dataset", [https://doi.org/10.48550/arXiv.1611.05799](https://doi.org/10.48550/arXiv.1611.05799)
 7. Mudrová, Martina and Aleš Procházka. “PRINCIPAL COMPONENT ANALYSIS IN IMAGE PROCESSING.” (2005).
 8. Nsang, Augustine & Bello, A.M. & Shamsudeen, Hammed. (2015). Image reduction using assorted dimensionality reduction techniques. 1353. 139-146.
 9. Patel, Chirag & Patel, Atul & Patel, Dharmendra. (2012). Optical Character Recognition by Open source OCR Tool Tesseract: A Case Study. International Journal of Computer Applications. 55. 50-56. 10.5120/8794-2784.
-10. Image classification : Tensorflow Core (no date) TensorFlow. Available at: https://www.tensorflow.org/tutorials/images/classification (Accessed: November 11, 2022).
+10. Image classification : Tensorflow Core (no date) TensorFlow. Available at: [https://www.tensorflow.org/tutorials/images/classification](https://www.tensorflow.org/tutorials/images/classification) (Accessed: November 11, 2022).
 
 # Gantt Chart and Proposed Timeline
 [View File](https://gtvault-my.sharepoint.com/:x:/g/personal/rramachandra7_gatech_edu/Ecd-YPwCuFBDuvu44UX_7J0B0jfClvfIibe9kC5hi7yXXw?e=a2dXz0)
