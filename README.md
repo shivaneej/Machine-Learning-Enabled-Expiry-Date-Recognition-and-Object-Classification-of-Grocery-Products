@@ -55,13 +55,13 @@ An example of the image augmentation performed on one of the images is as follow
   </div>
   <div align="left">
     <figure>
-      <img src="CAKE0000_LR.png">
+      <img src="CAKE0000_Flip_LR.png">
       <figcaption>Left-right flipped image</figcaption>
     </figure>
   </div>
   <div align="left">
     <figure>
-      <img src="CAKE0000_UP.png">
+      <img src="CAKE0000_Flip_UP.png">
       <figcaption>Up-down flipped image</figcaption>
     </figure>
   </div>
@@ -81,7 +81,7 @@ An example of the image augmentation performed on one of the images is as follow
   </div>
   <div align="left">
     <figure>
-      <img src="CAKE0000_SATURATED.png">
+      <img src="CAKE0000_SATURATE.png">
       <figcaption>Saturation adjusted image</figcaption>
     </figure>
   </div>
