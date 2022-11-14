@@ -38,6 +38,7 @@ An example of image compressed with the help of PCA is as shown below:
   	<img src="OI_RI.png"><br>
     <em>Image Reduction with PCA </em>
 </div>
+<br>
 
 To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. We tried the following augmentation variations on our images: <br>
 1) Left-Right flip <br>
@@ -75,7 +76,6 @@ The augmented images for the above sample image as described in the order above 
 | 4.  | Snacks     | 1021                             | 8168                            |
 | 5.  | Beverages  | 1591                             | 12728                           |
 | 6.  | Others     | 2704                             | 21632                           |
-
 <br>
 
 # Method
