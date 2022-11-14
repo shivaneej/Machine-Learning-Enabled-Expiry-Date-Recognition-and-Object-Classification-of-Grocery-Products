@@ -67,7 +67,7 @@ In our first part of the project, we have performed a image classification of th
 
 
 <div align="center">
-  	<img src="model-architecture.png">
+  	<img src="model-architecture.png"> <br>
     <em>ResNet50 model architecture used for Object Classification</em>
 </div>
 
