@@ -103,8 +103,8 @@ Using unsupervised learning, we can determine whether an item has expired or not
 The performance of the model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the dataset used for this classification model was comparatively very small. Thus, increasing the dataset size by collecting new data and performing more augmentation could be the key to fix the overfitting problem.
 
 <p float="center">
-  <img src="Results_1.png" width="100"/>
-  <img src="Results_2.png" width="100"/>
+  <img src="Results_1.png" width="300"/>
+  <img src="Results_2.png" width="300"/>
 </p>
 
 
