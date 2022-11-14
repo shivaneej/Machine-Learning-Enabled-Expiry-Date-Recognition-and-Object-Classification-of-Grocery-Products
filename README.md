@@ -24,10 +24,10 @@ Many grocery products are similar in shape and texture, making it difficult for 
 
 # Data Collection and Preprocessing
 The data for the project was obtained from 2 different sources:
-1) The dataset for image classification was obtained from "The Freiburg Groceries Dataset" which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
-2) The dataset for date detection was obtained from "ExpDate" dataset which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
+1. The dataset for image classification was obtained from "The Freiburg Groceries Dataset"[6] which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
+2. The dataset for date detection was obtained from "ExpDate" dataset[5] which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
 
-For all the images in our dataset, we first started with an image compresssion with the help of PCA. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
+For all the images in our dataset, we first started with an image compresssion with the help of PCA[7][8]. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
 
 An example of image compressed with the help of PCA is as shown below:
 
@@ -52,20 +52,29 @@ An example of the image augmentation performed on one of the images is as follow
 
 The augmented images for the above sample image as described in the order above are as shown below:
 <p float="left">
-  <img src="CAKE0000_Flip_LR_256x256.png" width="100"/>
-  <img src="CAKE0000_Flip_UP_256x256.png" width="100"/>
-  <img src="CAKE0000_ROT90_256x256.png" width="100"/>
-  <img src="CAKE0000_ROT270_256x256.png" width="100"/>
-  <img src="CAKE0000_SATURATE_256x256.png" width="100"/>
-  <img src="CAKE0000_BRIGHT_256x256.png" width="100"/> 
-  <img src="CAKE0000_GAMMA_256x256.png" width="100"/>
+  <img src="CAKE0000_FLIP_LR.png" width="100"/>
+  <img src="CAKE0000_Flip_UP.png" width="100"/>
+  <img src="CAKE0000_ROT90.png" width="100"/>
+  <img src="CAKE0000_ROT270.png" width="100"/>
+  <img src="CAKE0000_SATURATE.png" width="100"/>
+  <img src="CAKE0000_BRIGHT.png" width="100"/> 
+  <img src="CAKE0000_GAMMA.png" width="100"/>
 </p>
 
 # Method
 
-In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages and Others.
+In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages, Dairy and Others.
 
-For the second part of the project, we started with the image compression of the products using a PCA. 
+<!-- More about the classification model  : Reshma -->
+
+
+Once we have the image classified, the next step is to detect the probable bounding box of expiry date for a packed product. We will be using a supervised model for the localization of the bounding box. For this we plan to use images of the "ExpDate" dataset which consists of packed products along with the co-ordinates of bounding boxes of dates. After this, we will crop the image as per the coodinates of the bounding box and use Optical Character Recognition (OCR)[9] on this cropped image to detect the date.
+
+For, the cropping and date extraction process using OCR, we started with converting the image to grayscale, then resized our image and applied morphological transforms to enhance the contrast of the pixels of the image. 
+
+<div align="center">
+  	<img src="ocr-image.jpg">
+</div>
 
 <!-- The aim of this project is to: 
 * Identify the product using object classification (supervised learning) 
