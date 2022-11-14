@@ -184,9 +184,6 @@ A mobile application that demonstrates the working of the models could also be d
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Data preprocessing for supervised learning </td>
-  </tr>
-  <tr>
     <td class="tg-0pky">Image augmentation </td>
   </tr>
   <tr>
