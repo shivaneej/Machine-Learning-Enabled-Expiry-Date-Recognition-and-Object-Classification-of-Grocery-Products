@@ -184,8 +184,11 @@ A mobile application that demonstrates the working of the models could also be d
 </thead>
 <tbody>
   <tr>
-    <td class="tg-c3ow" rowspan="3">Shivanee Jaiswal </td>
+    <td class="tg-c3ow" rowspan="4">Shivanee Jaiswal </td>
     <td class="tg-0pky">Project Midterm Report </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Data collection and pre-processing </td>
   </tr>
   <tr>
     <td class="tg-0pky">Unsupervised learning - Image compression </td>
@@ -194,8 +197,11 @@ A mobile application that demonstrates the working of the models could also be d
     <td class="tg-0pky">Supervised Learning - Image date detection </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="3">Reshma Ramachandra </td>
+    <td class="tg-c3ow" rowspan="4">Reshma Ramachandra </td>
     <td class="tg-0pky">Project Midterm Report </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Literature review </td>
   </tr>
   <tr>
     <td class="tg-0pky">Unsupervised Learning - Product Classification </td>
@@ -204,31 +210,40 @@ A mobile application that demonstrates the working of the models could also be d
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="3">Janavi Khochare </td>
+    <td class="tg-c3ow" rowspan="4">Janavi Khochare </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Literature Review </td>
+  </tr>
+  <tr>
     <td class="tg-0pky">Supervised learning - Date detection </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="3">Srikesh Reddy </td>
+    <td class="tg-c3ow" rowspan="4">Srikesh Reddy </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
   </tr>
   <tr>
+    <td class="tg-0pky">Data collection and pre-processing </td>
+  </tr>
+  <tr>
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="3">Nikhil Viswanath </td>
+    <td class="tg-c3ow" rowspan="4">Nikhil Viswanath </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Image augmentation </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Data collection and pre-processing </td>
   </tr>
   <tr>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
