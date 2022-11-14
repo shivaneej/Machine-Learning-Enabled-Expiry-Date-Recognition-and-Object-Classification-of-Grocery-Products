@@ -50,7 +50,7 @@ An example of the image augmentation performed on one of the images is as follow
   	<img src="CAKE0000.png">
 </div>
 
-The augmented images for the above sample image are as shown below:
+The augmented images for the above sample image as described in the order above are as shown below:
 <p float="left">
   <img src="CAKE0000_FLIP_LR.png" width="100" />
   <img src="CAKE0000_Flip_UP.png" width="100" />
