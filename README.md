@@ -44,22 +44,61 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 6) Brightness adjusted
 7) Gamma adjusted
 
-An example of the image augmentation performed on one of the images is as follows. The original image is as follows:
+An example of the image augmentation performed on one of the images is as follows.:
 
-<div align="center">
-  	<img src="CAKE0000.png">
+An example of the image augmentation performed on one of the images is as follows:
+<div align="row">
+  <div align="left">
+    <figure>
+      <img src="CAKE_0000.png">
+      <figcaption>Original image</figcaption>
+    </figure>      
+  </div>
+  <div align="column">
+      <figure>
+      <img src="CAKE_0000_LR.png">
+      <figcaption>Left-right flipped image</figcaption>
+    </figure
+  </div>
+  <div align="column">
+      <figure>
+      <img src="CAKE_0000_UP.png">
+      <figcaption>Up-down flipped image</figcaption>
+    </figure
+  </div>
+  <div align="column">
+      <figure>
+      <img src="CAKE_0000_ROT90.png">
+      <figcaption>90 &#176; rotated image</figcaption>
+    </figure
+  </div>
+</div> 
+<div align="row">
+  <div align="left">
+      <figure>
+      <img src="CAKE_0000_ROT270.png">
+      <figcaption>270 &#176; rotated image</figcaption>
+    </figure
+  </div>
+  <div align="left">
+      <figure>
+      <img src="CAKE_0000_SATURATED.png">
+      <figcaption>Saturation adjusted image</figcaption>
+    </figure
+  </div>
+  <div align="left">
+      <figure>
+      <img src="CAKE_0000_BRIGHT.png">
+      <figcaption>Brightness adjusted image</figcaption>
+    </figure
+  </div>
+  <div align="left">
+      <figure>
+      <img src="CAKE_0000_GAMMA.png">
+      <figcaption>Gamma Corrected image</figcaption>
+    </figure
+  </div>
 </div>
-
-The augmented images for the above sample image as described in the order above are as shown below:
-<p float="left">
-  <img src="CAKE0000_FLIP_LR.png" width="100" />
-  <img src="CAKE0000_Flip_UP.png" width="100" />
-  <img src="CAKE0000_ROT90.png" width="100" />
-  <img src="CAKE0000_ROT270.png" width="100" />
-  <img src="CAKE0000_SATURATE.png" width="100" />
-  <img src="CAKE0000_BRIGHT.png" width="100" /> 
-  <img src="CAKE0000_GAMMA.png" width="100" />
-</p>
 
 # Method
 
