@@ -13,7 +13,7 @@ Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Si
 # Introduction and Background
 Few products can last forever, more so food items. Expiration dates on products serve as an estimate for the healthy usage of the product. It is the date up to which food maintains its biological and physical stability. There are many cases where the information on the product label is hard to read and this is even more true in the case of a visually impaired person. With an increasing need to maintain the food quality standard, this remains an issue which needs to be tackled. 
 
-For the scope of this project, we considered an image data set which has images of various fruits, vegetables, packed products and beverages, with expiry date in 13 different date formats for the packed food products. 
+For the scope of this project, we considered an image data set which has real images of various food, beverage and drugs consisting of 13 different date formats. Moreover, a custom dataset with synthetic images having dates similar to an actual product label is considered for building the model.  
 
 # Problem Definition and Motivation
 Many grocery products are similar in shape and texture, making it difficult for visually impaired people to identify them using touch. Also, they cannot read expiry dates of products, necessary to ensure safe consumption. Thus, we aim to create a system providing audio feedback to such people by identifying the grocery product and the best-before/expiry date if mentioned.
@@ -27,7 +27,7 @@ The data for the project was obtained from 2 different sources:
 1) The dataset for image classification was obtained from "The Freiburg Groceries Dataset" which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
 2) The dataset for date detection was obtained from "ExpDate" dataset which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
 
-For all the images in our dataset, we first started with an image compresssion with the help of PCA. The dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our model's training time. So in order to reduce the training time, we used Principal Component Analysis (PCA) technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
+For all the images in our dataset, we first started with an image compresssion with the help of PCA. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around 98% of the variation in the Blue channel, 97.5% of variation in the Red channel and around 98% of the variation in the Green channel. 
 
 An example of image compressed with the help of PCA is as shown below:
 
@@ -47,23 +47,28 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 An example of the image augmentation performed on one of the images is as follows:
 
 <div align="center">
-  	<img src="OI_RI.png">
+  	<img src=".png">
 </div>
 
 # Method
 
-In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages, Dairy and Others.
+In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages and Others. We used the following metrics for our classification:
+1) Precision
+2) Recall
+3) F1 score
+4) Accuracy
 
-<!-- More about the classification model  : Reshma -->
+The confusion matrix for the classification problem in hand is as shown below:
 
+**XXX confusion matrix image XXX**
 
-Once we have the image classified, the next step is to detect the probable bounding box of expiry date for a packed product. We will be using a supervised model for the localization of the bounding box. For this we plan to use images of the "ExpDate" dataset which consists of packed products along with the co-ordinates of bounding boxes of dates. After this, we will crop the image as per the coodinates of the bounding box and use Optical Character Recognition (OCR) on this cropped image to detect the date.
+The values of above reported metrics for our classification problem are as follows:
+Precision = 
+Recall = 
+F1 score = 
+Accuracy =
 
-For, the cropping and date extraction process using OCR, we started with converting the image to grayscale, then resized our image and applied morphological transforms to enhance the contrast of the pixels of the image. 
-
-<div align="center">
-  	<img src="ocr-image.jpg">
-</div>
+For the second part of the project, we started with the image compression of the products using a PCA. 
 
 <!-- The aim of this project is to: 
 * Identify the product using object classification (supervised learning) 
@@ -82,23 +87,6 @@ Using unsupervised learning, we can determine whether an item has expired or not
 </div>
 
 # Results and Discussion
-
-We used the following metrics for our classification:
-1) Precision
-2) Recall
-3) F1 score
-4) Accuracy
-
-The confusion matrix for the classification problem in hand is as shown below:
-
-**XXX confusion matrix image XXX**
-
-The values of above reported metrics for our classification problem are as follows:
-Precision = 
-Recall = 
-F1 score = 
-Accuracy =
-
 
 <!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
