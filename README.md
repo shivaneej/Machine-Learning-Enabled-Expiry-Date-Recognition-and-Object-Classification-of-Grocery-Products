@@ -49,7 +49,7 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 An example of the image augmentation performed on one of the images is as follows. The original image is as follows:
 
 <div align="center">
-  	<img src="CAKE0000.png">
+  	<img src="CAKE0000.png"><br>
     <em>Sample image from the dataset </em>
 </div>
 
