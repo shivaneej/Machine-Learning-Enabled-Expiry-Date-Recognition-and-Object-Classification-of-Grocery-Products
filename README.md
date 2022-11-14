@@ -44,18 +44,37 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 6) Brightness adjusted
 7) Gamma adjusted
 
-An example of the image augmentation performed on of the images is as follows:
+An example of the image augmentation performed on one of the images is as follows:
 
 <div align="center">
   	<img src="OI_RI.png">
 </div>
 
 # Method
-The aim of this project is to: 
+
+In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages and Others. We used the following metrics for our classification:
+1) Precision
+2) Recall
+3) F1 score
+4) Accuracy
+
+The confusion matrix for the classification problem in hand is as shown below:
+
+**XXX confusion matrix image XXX**
+
+The values of above reported metrics for our classification problem are as follows:
+Precision = 
+Recall = 
+F1 score = 
+Accuracy =
+
+For the second part of the project, we started with the image compression of the products using a PCA. 
+
+<!-- The aim of this project is to: 
 * Identify the product using object classification (supervised learning) 
 * Extract the expiry date information on the packages (unsupervised learning) 
 
-This object classification task is an image classification task based on Transfer Learning. The base CNN model (ResNet-45) is pretrained on the ImageNet dataset (due to its 1000+ images each for an extensive list of classes) and the weights obtained are used in further training the ResNet model on the custom dataset. 
+This object classification task is an image classification task based on Transfer Learning. The base CNN model (ResNet-45) is pretrained on the ImageNet dataset (due to its 1000+ images each for an extensive list of classes) and the weights obtained are used in further training the ResNet model on the custom dataset.  -->
 
 <div align="center">
   	<img src="Transfer Learning flowchart.drawio.png">
@@ -67,12 +86,13 @@ Using unsupervised learning, we can determine whether an item has expired or not
   	<img src="ml_project.drawio (3).png">
 </div>
 
-# Potential Results and Discussion
-Potential results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
+# Results and Discussion
+
+<!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
 Performance metrics used to evaluate the models will be balanced accuracy, precision, recall, f1-score, confusion matrix, ROC AUC and Top-k classification accuracy. 
 
-A mobile application that demonstrates the working of the models could also be designed. Further, this work can be extended towards the development of a scanner that can help the visually impaired in a potential lifesaving situation – as in the case of detecting expired medicines. 
+A mobile application that demonstrates the working of the models could also be designed. Further, this work can be extended towards the development of a scanner that can help the visually impaired in a potential lifesaving situation – as in the case of detecting expired medicines.  -->
 
 # Reference
 1. Ahmet Cagatay Seker, Sang Chul Ahn “A generalized framework for recognition of expiration dates on product packages using fully convolutional networks”, Expert Systems with Applications, Volume 203, 2022, 117310, ISSN 0957-4174, [https://doi.org/10.1016/j.eswa.2022.117310](https://doi.org/10.1016/j.eswa.2022.117310). 
