@@ -112,12 +112,12 @@ The performance of the model is shown below with respect to its test and validat
     <em>Model loss performance on augmented dataset</em>
 </div>
 
-Evaluation metrics for the classification model:
+Evaluation metrics for the classification model: <br>
 1) Training Accuracy: 97.55% <br>
-2) Validation Accuracy: 96.80%
-3) Precision: 82.66%
-4) Recall: 98%
-5) F1 Score: 91.03%
+2) Validation Accuracy: 96.80% <br>
+3) Precision: 82.66% <br>
+4) Recall: 98% <br>
+5) F1 Score: 91.03% <br>
 
 The below images show the sample outputs for some images for which the model predicts the right classes. However, for some images, the model failed to predict the right class which is to be expected from the overfitting problem. For example, the fourth image of apples in a supermarket is predicted to belong to the packed class by the trained model. For the particular use-case of expiry date detection, this image of apples would not be considered to be packed since it has no expiry date to detect. Thus, such edge cases should also be dealt with in the next half. 
 
