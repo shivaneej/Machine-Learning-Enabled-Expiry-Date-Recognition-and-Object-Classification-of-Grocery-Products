@@ -71,21 +71,14 @@ The augmented images for the above sample image as described in the order above 
 | 6.  | Others     | 2704                             | 21632                           |
 
 
-| No. | Class    | No.of images before augmentation | No.of images after augmentation |
-|-----|----------|----------------------------------|---------------------------------|
-| 1.  | Products | 1700                             | 6800                            |
-| 2.  | Date     | 510                              | 2040                            |
-
 # Method
 
-In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of xxx images into a training set of xxx images and a test dataset of xxx images. As discussed earlier, we broadly classfied the images into 5 categories: Fruits, Vegetables, Snacks, Beverages, Dairy and Others.
-
+In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of images into a training set and test dataset in the ratio of 4:1. As discussed earlier, we broadly classfied the images into 6 categories: Fruits, Vegetables, Snacks, Beverages, Dairy and Others.
 
 <div align="center">
   	<img src="model-architecture.png"> <br>
     <em>ResNet50 model architecture used for Object Classification</em>
 </div>
-
 
 The Object Classification model classifies the products into seven different classes, Beverages, Fruits, Vegetables, Snacks, Dairy, Others and Packed (which is the ExpDate dataset) using a supervised learning approach. This approach [10] uses Transfer Learning where the weights of the classification neural network are obtained from a pretrained model which in this case is the ResNet50 model trained on the ImageNet [2] dataset. Then ResNet50 is used on top of the custom CNN layer for classification. The ResNet50 architecture includes 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer. ResNet50 is used here because it makes it possible to train ultra deep neural networks. A network can contain hundreds or thousands of layers and still achieve great performance due to residual networks. ResNets have a deep residual learning framework containing shortcut connections that simply perform identity mappings. The advantage of such identity mappings is that without any additional parameters added to the model and without increasing computational time, the performance is improved. Compared to other ResNets, ResNet50 has a few changes, the shortcut connections previously skipped two layers but now they skip three layers and presence of 1 x 1 convolution layers in between. The learning rate was set to be 0.01. Batch learning was used with a batch size of 32. 
 
@@ -115,7 +108,7 @@ Using unsupervised learning, we can determine whether an item has expired or not
 
 # Results and Discussion
 
-The performance of the model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the dataset used for this classification model was comparatively very small. Thus, increasing the dataset size by collecting new data and performing more augmentation could be the key to fix the overfitting problem.
+The performance of the model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the original dataset used for this classification model was comparatively very small. Thus, increasing the size of the data before augmentation could be the key to fix the overfitting problem. Methods like standardization, regularization, addition of dropout layers when necessary and fine tuning of hyperparameters could help in improving the model’s performance further.
 
 <div align="center">
   	<img src="Results_1.png"> <br>
