@@ -9,11 +9,11 @@ Jaiswal Shivanee, Sama Sai Srikesh Reddy, Anugundanahalli Ramachandra Reshma, Si
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zQJS_rvAnV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 # Introduction and Background
 Few products can last forever, more so food items. Expiration dates on products serve as an estimate for the healthy usage of the product. It is the date up to which food maintains its biological and physical stability. There are many cases where the information on the product label is hard to read and this is even more true in the case of a visually impaired person. With an increasing need to maintain the food quality standard, this remains an issue which needs to be tackled. 
 
 For the scope of this project, we considered an image data set which has real images of various food, beverage and drugs consisting of 13 different date formats. Moreover, a custom dataset with synthetic images having dates similar to an actual product label is considered for building the model.  
-
 
 # Problem Definition and Motivation
 Many grocery products are similar in shape and texture, making it difficult for visually impaired people to identify them using touch. Also, they cannot read expiry dates of products, necessary to ensure safe consumption. Thus, we aim to create a system providing audio feedback to such people by identifying the grocery product and the best-before/expiry date if mentioned.
@@ -21,6 +21,19 @@ Many grocery products are similar in shape and texture, making it difficult for 
 <div align="center">
   	<img src="flow_chart_updated.png">
 </div>
+
+# Data Collection and Preprocessing
+The data for the project was obtained from 2 different sources:
+1) The dataset for image classification was obtained from "The Freiburg Groceries Dataset" which is a publicly available dataset containing 5000 RGB images of various food classes. For the first part of our project we will classify the images broadly into 5 labels: Fruits, Vegetables, Beverages, Snacks and Other
+2) The dataset for date detection was obtained from "ExpDate" dataset which is again a publicly available dataset. This dataset has images corresponding to real images of products with their expiry dates, few images which have only dates from real products and few images which have synthetic dates of various formats which will be used in the date detection part of our project
+
+For all the images in our dataset, we first started with an image compresssion with the help of PCA. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around xx% of the variation in our original image.
+
+<div align="center">
+  	<img src="flow_chart_updated.png">
+</div>
+
+To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. 
 
 # Method
 The aim of this project is to: 
