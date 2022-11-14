@@ -113,7 +113,7 @@ The performance of the model is shown below with respect to its test and validat
 </div>
 
 Evaluation metrics for the classification model:
-1) Training Accuracy: 97.55%
+1) Training Accuracy: 97.55% <br>
 2) Validation Accuracy: 96.80%
 3) Precision: 82.66%
 4) Recall: 98%
