@@ -30,7 +30,7 @@ The data for the project was obtained from 2 different sources:
 For all the images in our dataset, we first started with an image compresssion with the help of PCA. The ExpDate dataset has very high quality images (approximately 1000 x 1000 dimensions - since each image had a different size) which will increase our models' training time. So in order to reduce the training time, we performed used PCA technique using 50 components which captured around xx% of the variation in our original image.
 
 <div align="center">
-  	<img src="flow_chart_updated.png">
+  	<img src="Original_image.png">
 </div>
 
 To help tackle the problem of overfitting our model to the data-set in hand, we also tried to artificially expand our data-set by performing image augmentation on our original product images. 
