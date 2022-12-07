@@ -190,7 +190,7 @@ The below images show the sample outputs for some images for which the model pre
 After splitting the images from the ExpDate data-set into train and test sets in a ratio of 4:1, we trained the model using the architecture as detailed above on the train data-set. Later we tested the trained architecture on the test data-set. The Loss vs Epoch for both training and validation tests is as shown in the image below:
 
 <div align="center">
-  	<img src="images/Results_3.png"> <br>
+  	<img src="images/VGGLoss.png"> <br>
     <em>Training and Validation loss for Date Area Detection</em>
 </div>
 <br>
@@ -199,18 +199,18 @@ The validation accuracy for the bounding-box regression model after hyper parame
 
 Few examples from the prediction model after running the images through the NN model and OCR model are as shown below:
 <div align="center">
-  	<img src="images/Results_3.png"> <br>
+  	<img src="images/DDResult1.png"> <br>
     <em>Date detection on image with date in the format ‘YYYY.MM.DD’</em>
 </div>
 <br>
 <div align="center">
-  	<img src="images/Results_3.png"> <br>
+  	<img src="images/DDResult3.png"> <br>
     <em>Date detection on image with date in the format ‘MMM YYYY’</em>
 </div>
 <br>
 <div align="center">
-  	<img src="images/Results_3.png"> <br>
-    <em>Date detection on image with date in the format ‘DD.MM.YYYY’</em>
+  	<img src="images/DDResult2.png"> <br>
+    <em>Date detection on image with date in the format ‘DD.MM.YY’</em>
 </div>
 <br> 
 
