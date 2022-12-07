@@ -164,12 +164,12 @@ The performance of the classification model is shown below with respect to its t
   	<img src="images/Results_1.png"> <br>
     <em>Model accuracy performance on augmented dataset</em>
 </div>
-
+<!-- 
 <div align="center">
   	<img src="images/Results_2.png"> <br>
     <em>Model loss performance on augmented dataset</em>
 </div>
-<br>
+<br> -->
 
 Evaluation metrics for the classification model: <br>
 1) Training Accuracy: 97.55% <br>
