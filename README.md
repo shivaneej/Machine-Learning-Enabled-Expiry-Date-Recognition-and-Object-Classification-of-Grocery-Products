@@ -102,7 +102,7 @@ The batch size, learning rate and number of epochs were altered to check for the
 </table>
 
 ## Expiry Date Detection
-Once we have the image classified, the next step would be to detect the probable bounding box of expiry date for a packed product and then extract the data from the bounding box. For the first task we used a supervised model for the localization of the bounding box where we used the ExpDate datasets which consists of packed products along with the coordinates of the bounding-box of dates. We will be using the VGG16 architecture for transfer learning. The architecture is as follows:
+Once we have the image classified, the next step would be to detect the probable bounding box of expiry date for a packed product and then extract the data from the bounding box. For the first task we used a supervised model for the localization of the bounding box where we used the ExpDate datasets which consists of packed products along with the coordinates of the bounding-box of dates. We used the VGG16 architecture for transfer learning. The architecture is as follows:
 
 TO BE CHANGED
 <div align="center">
