@@ -20,7 +20,7 @@ For the scope of this project, we considered an image data set which has images 
 Many grocery products are similar in shape and texture, making it difficult for visually impaired people to identify them using touch. Also, they cannot read expiry dates of products, necessary to ensure safe consumption. Thus, we aim to create a system providing audio feedback to such people by identifying the grocery product and the best-before/expiry date if mentioned.
 
 <div align="center">
-  	<img src="flow_chart_updated.png"> <br>
+  	<img src="images/flow_chart_updated.png"> <br>
     <em>Flow chart of the project </em>
 </div>
 <br>
@@ -35,7 +35,7 @@ For all the images in our dataset, we first started with an image compresssion w
 An example of image compressed with the help of PCA is as shown below:
 
 <div align="center">
-  	<img src="OI_RI.png"><br>
+  	<img src="images/OI_RI.png"><br>
     <em>Image Reduction with PCA </em>
 </div>
 <br>
@@ -52,7 +52,7 @@ To help tackle the problem of overfitting our model to the data-set in hand, we 
 An example of the image augmentation performed on one of the images is as follows. 
 
 <div align="center">
-  	<img src="data_aug.png"><br>
+  	<img src="images/data_aug.png"><br>
     <em>Data Augmentation Example</em>
 </div>
 <br>
@@ -73,7 +73,7 @@ An example of the image augmentation performed on one of the images is as follow
 In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of images into a training set and test dataset in the ratio of 4:1. As discussed earlier, we broadly classfied the images into 6 categories: Fruits, Vegetables, Snacks, Beverages, Dairy and Others.
 
 <div align="center">
-  	<img src="Transfer Learning flowchart.drawio.png"><br>
+  	<img src="images/Transfer Learning flowchart.drawio.png"><br>
     <em>Transfer Learning Framework </em>
 </div>
 <br>
@@ -81,7 +81,7 @@ In our first part of the project, we have performed a image classification of th
 The Object Classification model classifies the products into seven different classes, Beverages, Fruits, Vegetables, Snacks, Dairy, Others and Packed (which is the ExpDate dataset) using a supervised learning approach. This approach [10] uses Transfer Learning where the weights of the classification neural network are obtained from a pretrained model which in this case is the ResNet50 model trained on the ImageNet [2] dataset. Then ResNet50 is used on top of the custom CNN layer for classification. The ResNet50 architecture includes 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer. ResNet50 is used here because it makes it possible to train ultra deep neural networks. A network can contain hundreds or thousands of layers and still achieve great performance due to residual networks. ResNets have a deep residual learning framework containing shortcut connections that simply perform identity mappings. The advantage of such identity mappings is that without any additional parameters added to the model and without increasing computational time, the performance is improved. Compared to other ResNets, ResNet50 has a few changes, the shortcut connections previously skipped two layers but now they skip three layers and presence of 1 x 1 convolution layers in between. The learning rate was set to be 0.01. Batch learning was used with a batch size of 32. 
 
 <div align="center">
-  	<img src="model-architecture.png"> <br>
+  	<img src="images/model-architecture.png"> <br>
     <em>ResNet50 model architecture used for Object Classification</em>
 </div>
 <br>
@@ -91,7 +91,7 @@ Once we have the image classified, the next step is to detect the probable bound
 For, the cropping and date extraction process using OCR, we started with converting the image to grayscale, then resized our image and applied morphological transforms to enhance the contrast of the pixels of the image. 
 
 <div align="center">
-  	<img src="ocr-image.jpg"><br>
+  	<img src="images/ocr-image.jpg"><br>
     <em>OCR output </em>
 </div>
 <br>
@@ -113,12 +113,12 @@ This object classification task is an image classification task based on Transfe
 The performance of the model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the original dataset used for this classification model was comparatively very small. Thus, increasing the size of the data before augmentation could be the key to fix the overfitting problem. Methods like standardization, regularization, addition of dropout layers when necessary and fine tuning of hyperparameters could help in improving the model’s performance further.
 
 <div align="center">
-  	<img src="Results_1.png"> <br>
+  	<img src="images/Results_1.png"> <br>
     <em>Model accuracy performance on augmented dataset</em>
 </div>
 
 <div align="center">
-  	<img src="Results_2.png"> <br>
+  	<img src="images/Results_2.png"> <br>
     <em>Model loss performance on augmented dataset</em>
 </div>
 <br>
@@ -133,7 +133,7 @@ Evaluation metrics for the classification model: <br>
 The below images show the sample outputs for some images for which the model predicts the right classes. However, for some images, the model failed to predict the right class which is to be expected from the overfitting problem. For example, the fourth image of apples in a supermarket is predicted to belong to the packed class by the trained model. For the particular use-case of expiry date detection, this image of apples would not be considered to be packed since it has no expiry date to detect. Thus, such edge cases should also be dealt with in the next half. 
 
 <div align="center">
-  	<img src="Results_3.png"> <br>
+  	<img src="images/Results_3.png"> <br>
     <em>Model classification performance on some samples</em>
 </div>
 <br>
