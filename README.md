@@ -70,6 +70,7 @@ An example of the image augmentation performed on one of the images is as follow
 
 # Method
 
+## Object Classification Model
 In our first part of the project, we have performed a image classification of the grocery images in our dataset. We split our original dataset of images into a training set and test dataset in the ratio of 4:1. As discussed earlier, we broadly classfied the images into 6 categories: Fruits, Vegetables, Snacks, Beverages, Dairy and Others.
 
 <div align="center">
@@ -78,7 +79,7 @@ In our first part of the project, we have performed a image classification of th
 </div>
 <br>
 
-The Object Classification model classifies the products into seven different classes, Beverages, Fruits, Vegetables, Snacks, Dairy, Others and Packed (which is the ExpDate dataset) using a supervised learning approach. This approach [10] uses Transfer Learning where the weights of the classification neural network are obtained from a pretrained model which in this case is the ResNet50 model trained on the ImageNet [2] dataset. Then ResNet50 is used on top of the custom CNN layer for classification. The ResNet50 architecture includes 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer. ResNet50 is used here because it makes it possible to train ultra deep neural networks. A network can contain hundreds or thousands of layers and still achieve great performance due to residual networks. ResNets have a deep residual learning framework containing shortcut connections that simply perform identity mappings. The advantage of such identity mappings is that without any additional parameters added to the model and without increasing computational time, the performance is improved. Compared to other ResNets, ResNet50 has a few changes, the shortcut connections previously skipped two layers but now they skip three layers and presence of 1 x 1 convolution layers in between. The learning rate was set to be 0.01. Batch learning was used with a batch size of 32. 
+The Object Classification model classifies the products into six different classes, Beverages, Fruits, Vegetables, Snacks, Dairy, Others using a supervised learning approach. This approach [10] uses Transfer Learning where the weights of the classification neural network are obtained from a pretrained model which in this case is the ResNet50 model trained on the ImageNet [2] dataset. Then ResNet50 is used on top of the custom CNN layer for classification. The ResNet50 architecture includes 48 Convolution layers along with 1 MaxPool and 1 Average Pool layer. ResNet50 is used here because it makes it possible to train ultra deep neural networks. A network can contain hundreds or thousands of layers and still achieve great performance due to residual networks. ResNets have a deep residual learning framework containing shortcut connections that simply perform identity mappings. The advantage of such identity mappings is that without any additional parameters added to the model and without increasing computational time, the performance is improved. Compared to other ResNets, ResNet50 has a few changes, the shortcut connections previously skipped two layers but now they skip three layers and presence of 1 x 1 convolution layers in between. 
 
 <div align="center">
   	<img src="images/model-architecture.png"> <br>
@@ -86,7 +87,40 @@ The Object Classification model classifies the products into seven different cla
 </div>
 <br>
 
-Once we have the image classified, the next step is to detect the probable bounding box of expiry date for a packed product. We will be using a supervised model for the localization of the bounding box. For this we plan to use images of the "ExpDate" dataset which consists of packed products along with the co-ordinates of bounding boxes of dates. After this, we will crop the image as per the coodinates of the bounding box and use Optical Character Recognition (OCR)[9] on this cropped image to detect the date.
+### Dealing With Overfitting
+On training the ResNet-50 model with the initial dataset, overfitting was evident. Thus, to overcome overfitting various techniques were implemented.
+<ol>
+  <li>Increasing the size of the training dataset: Various data augmentation methods such as left-right and up-down rotation, 90 degree and 270 degree flip, adjustments in saturation, brightness and gamma values in order to increase the dataset size.
+    <li>Dropout regularization: Dropout layers were added in between the dense layers of the classification model. Dropout helps in removing or dropping certain inputs to a layer in order to make the network nodes more robust to the inputs.
+</ol>
+
+### Fine Tuning Parameters
+The batch size, learning rate and number of epochs were altered to check for the optimal values that led to improved classification accuracy. After much experimenting, the best values for these hyperparameters turned out to be:
+
+| Batch Size | 64  | 
+| Learning Rate | 0.01 |
+| Number of epochs | 20 | 
+
+## Expiry Date Detection
+Once we have the image classified, the next step would be to detect the probable bounding box of expiry date for a packed product and then extract the data from the bounding box. For the first task we used a supervised model for the localization of the bounding box where we used the ExpDate datasets which consists of packed products along with the coordinates of the bounding-box of dates. We will be using the VGG16 architecture for transfer learning. The architecture is as follows:
+
+TO BE CHANGED
+<div align="center">
+  	<img src="images/ocr-image.jpg"><br>
+    <em>OCR output </em>
+</div>
+<br>
+
+From this architecture we removed the fully-connected classification layer and introduced a new layer for our prediction task.
+
+The first task in this process was to build the NN layer for performing the bounding-box detection. To perform this we first need to scale the input bounding-box coordinates between 0 and 1. The neural architecture consists of 4 neurons for each of the x and y coordinates of the top-left and bottom-right vertices. All these coordinates are passed into a Sigmoid activation function to perform the scaling in the range [0,1] as discussed above. Once this layer for detecting the box is built we will then insert it into the above architecture. For training the model, we freezed the convolution layer and only trained the full-trained layer to ensure that any previous features learned by the CNN are not destroyed and used a mean-squared error loss function on the training data-set. The newly added architecture is as shown in the image below:
+
+TO BE CHANGED
+<div align="center">
+  	<img src="images/ocr-image.jpg"><br>
+    <em>OCR output </em>
+</div>
+<br>
 
 For, the cropping and date extraction process using OCR, we started with converting the image to grayscale, then resized our image and applied morphological transforms to enhance the contrast of the pixels of the image. 
 
