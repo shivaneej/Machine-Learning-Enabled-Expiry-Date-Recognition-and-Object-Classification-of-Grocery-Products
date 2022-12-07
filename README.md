@@ -89,10 +89,8 @@ The Object Classification model classifies the products into six different class
 
 ### Dealing With Overfitting
 On training the ResNet-50 model with the initial dataset, overfitting was evident. Thus, to overcome overfitting various techniques were implemented.
-<ol>
-  <li>Increasing the size of the training dataset: Various data augmentation methods such as left-right and up-down rotation, 90 degree and 270 degree flip, adjustments in saturation, brightness and gamma values in order to increase the dataset size.
-    <li>Dropout regularization: Dropout layers were added in between the dense layers of the classification model. Dropout helps in removing or dropping certain inputs to a layer in order to make the network nodes more robust to the inputs.
-</ol>
+1. Increasing the size of the training dataset: Various data augmentation methods such as left-right and up-down rotation, 90 degree and 270 degree flip, adjustments in saturation, brightness and gamma values in order to increase the dataset size.
+2. Dropout regularization: Dropout layers were added in between the dense layers of the classification model. Dropout helps in removing or dropping certain inputs to a layer in order to make the network nodes more robust to the inputs.
 
 ### Fine Tuning Parameters
 The batch size, learning rate and number of epochs were altered to check for the optimal values that led to improved classification accuracy. After much experimenting, the best values for these hyperparameters turned out to be:
@@ -100,7 +98,8 @@ The batch size, learning rate and number of epochs were altered to check for the
 | Batch Size | 64  | 
 |----|----------|
 | Learning Rate | 0.01 |
-| Number of epochs | 20 | 
+| Number of epochs | 20 |
+
 
 ## Expiry Date Detection
 Once we have the image classified, the next step would be to detect the probable bounding box of expiry date for a packed product and then extract the data from the bounding box. For the first task we used a supervised model for the localization of the bounding box where we used the ExpDate datasets which consists of packed products along with the coordinates of the bounding-box of dates. We will be using the VGG16 architecture for transfer learning. The architecture is as follows:
