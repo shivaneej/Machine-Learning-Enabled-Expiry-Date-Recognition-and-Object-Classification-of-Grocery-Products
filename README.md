@@ -189,6 +189,10 @@ The below images show the sample outputs for some images for which the model pre
 ## Improved Model
 The initial problem of overfitting was handled through adding dropout layers and finetuning the model hyperparameters, especially batch size. The updated results show that there is an improvement in validation accuracy - to an extent it is more than training accuracy. Through increasing the batch size, we improve the model metric and also reduce the runtime per epoch - overall making the system more efficient that earlier. As shown in the graph below, the training and validation accuracies start at a lower value and increase steadily to reach a saturation point at around 20 epoch runs. The validation accuracy is about 0.5-1.0 more than the training accuracy throughout the epochs.
 <br>
+<div align="center">
+  	<img src="images/final_accuracy.jpeg"> <br>
+    <em>Improved Model accuracy performance on augmented dataset</em>
+</div>
 The final evaluation metrics are shown below: <br>
 1) Training Accuracy: 79.77% <br>
 2) Validation Accuracy: 83.15% <br>
