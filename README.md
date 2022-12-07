@@ -234,7 +234,7 @@ The final output of the combined system shows two things - the predicted class (
 <br>
 <div align="center">
   	<img src="images/prediction.jpeg"> <br>
-    em>Final Model prediction output on some samples</em>
+    <em>Final Model prediction output on some samples</em>
 </div>
 <br> 
 
