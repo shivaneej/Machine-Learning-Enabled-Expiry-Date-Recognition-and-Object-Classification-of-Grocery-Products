@@ -229,6 +229,15 @@ Few examples from the prediction model after running the images through the NN m
 </div>
 <br> 
 
+## Final Integrated Model Prediction
+The final output of the combined system shows two things - the predicted class (vegetable/fruit/packed) and the expiry date. A few sample outputs are shown below:
+<br>
+<div align="center">
+  	<img src="images/prediction.jpeg"> <br>
+    em>Final Model prediction output on some samples</em>
+</div>
+<br> 
+
 
 <!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
