@@ -230,7 +230,7 @@ Few examples from the prediction model after running the images through the NN m
 <br> 
 
 ## Final Integrated Model Prediction
-The final output of the combined system shows two things - the predicted class (vegetable/fruit/packed) and the expiry date. A few sample outputs are shown below:
+The final output of the combined system shows two things - the predicted class/category and the expiry date. A few sample outputs are shown below:
 <br>
 <div align="center">
   	<img src="images/prediction.jpeg"> <br>
