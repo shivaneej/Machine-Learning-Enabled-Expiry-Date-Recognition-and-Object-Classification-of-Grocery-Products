@@ -168,8 +168,8 @@ The performance of the classification model is shown below with respect to its t
 <div align="center">
   	<img src="images/Results_2.png"> <br>
     <em>Model loss performance on augmented dataset</em>
-</div>
-<br> -->
+</div> -->
+<br> 
 
 Evaluation metrics for the classification model: <br>
 1) Training Accuracy: 97.55% <br>
@@ -193,7 +193,8 @@ The initial problem of overfitting was handled through adding dropout layers and
   	<img src="images/final_accuracy.jpeg"> <br>
     <em>Improved Model accuracy performance on augmented dataset</em>
 </div>
-The final evaluation metrics are shown below: <br>
+<br>
+The final evaluation metrics are: <br>
 1) Training Accuracy: 79.77% <br>
 2) Validation Accuracy: 83.15% <br>
 3) Precision: 84.33% <br>
