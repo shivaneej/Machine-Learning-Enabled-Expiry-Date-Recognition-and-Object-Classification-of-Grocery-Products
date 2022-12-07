@@ -157,8 +157,8 @@ This object classification task is an image classification task based on Transfe
 </div> -->
 
 # Results and Discussion
-
-The performance of the model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the original dataset used for this classification model was comparatively very small. Thus, increasing the size of the data before augmentation could be the key to fix the overfitting problem. Methods like standardization, regularization, addition of dropout layers when necessary and fine tuning of hyperparameters could help in improving the model’s performance further.
+## Object Classification
+The performance of the classification model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the original dataset used for this classification model was comparatively very small. Thus, increasing the size of the data before augmentation could be the key to fix the overfitting problem. Methods like standardization, regularization, addition of dropout layers when necessary and fine tuning of hyperparameters could help in improving the model’s performance further.
 
 <div align="center">
   	<img src="images/Results_1.png"> <br>
@@ -185,6 +185,35 @@ The below images show the sample outputs for some images for which the model pre
     <em>Model classification performance on some samples</em>
 </div>
 <br>
+
+## Expiry Date Detection
+After splitting the images from the ExpDate data-set into train and test sets in a ratio of 4:1, we trained the model using the architecture as detailed above on the train data-set. Later we tested the trained architecture on the test data-set. The Loss vs Epoch for both training and validation tests is as shown in the image below:
+
+<div align="center">
+  	<img src="images/Results_3.png"> <br>
+    <em>Training and Validation loss for Date Area Detection</em>
+</div>
+<br>
+
+The validation accuracy for the bounding-box regression model after hyper parameter tuning is 91.4%. This value was obtained for a batch-size of 16, relu activation function, and 30 epochs.
+
+Few examples from the prediction model after running the images through the NN model and OCR model are as shown below:
+<div align="center">
+  	<img src="images/Results_3.png"> <br>
+    <em>Date detection on image with date in the format ‘YYYY.MM.DD’</em>
+</div>
+<br>
+<div align="center">
+  	<img src="images/Results_3.png"> <br>
+    <em>Date detection on image with date in the format ‘MMM YYYY’</em>
+</div>
+<br>
+<div align="center">
+  	<img src="images/Results_3.png"> <br>
+    <em>Date detection on image with date in the format ‘DD.MM.YYYY’</em>
+</div>
+<br> 
+
 
 <!-- Results include a comparative analysis of all classification models (ResNet-45/50/101, VGG-16, Inceptionv3, EfficientNet) trained and tested for identifying expiry dates and classifying items.  
 
