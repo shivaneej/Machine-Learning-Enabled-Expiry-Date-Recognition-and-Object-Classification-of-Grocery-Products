@@ -95,11 +95,11 @@ On training the ResNet-50 model with the initial dataset, overfitting was eviden
 ### Fine Tuning Parameters
 The batch size, learning rate and number of epochs were altered to check for the optimal values that led to improved classification accuracy. After much experimenting, the best values for these hyperparameters turned out to be:
 
-| Batch Size | 64  | 
-|----|----------|
-| Learning Rate | 0.01 |
-| Number of epochs | 20 |
-
+<table>
+  <tr><td>Batch Size</td><td>64</td></tr>
+  <tr><td>Learning Rate</td><td>0.01</td></tr>
+  <tr><td>Number of epochs</td><td>20</td></tr>
+</table>
 
 ## Expiry Date Detection
 Once we have the image classified, the next step would be to detect the probable bounding box of expiry date for a packed product and then extract the data from the bounding box. For the first task we used a supervised model for the localization of the bounding box where we used the ExpDate datasets which consists of packed products along with the coordinates of the bounding-box of dates. We will be using the VGG16 architecture for transfer learning. The architecture is as follows:
