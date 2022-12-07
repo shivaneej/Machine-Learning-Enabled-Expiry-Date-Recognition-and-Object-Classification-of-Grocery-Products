@@ -104,10 +104,10 @@ The batch size, learning rate and number of epochs were altered to check for the
 ## Expiry Date Detection
 Once we have the image classified, the next step would be to detect the probable bounding box of expiry date for a packed product and then extract the data from the bounding box. For the first task we used a supervised model for the localization of the bounding box where we used the ExpDate datasets which consists of packed products along with the coordinates of the bounding-box of dates. We used the VGG16 architecture for transfer learning. The architecture is as follows:
 
-TO BE CHANGED
+
 <div align="center">
-  	<img src="images/ocr-image.jpg"><br>
-    <em>OCR output </em>
+  	<img src="images/VGG.png"><br>
+    <em>VGG Architecture</em>
 </div>
 <br>
 
@@ -115,19 +115,17 @@ From this architecture we removed the fully-connected classification layer and i
 
 The first task in this process was to build the NN layer for performing the bounding-box detection. To perform this we first need to scale the input bounding-box coordinates between 0 and 1. The neural architecture consists of 4 neurons for each of the x and y coordinates of the top-left and bottom-right vertices. All these coordinates are passed into a Sigmoid activation function to perform the scaling in the range [0,1] as discussed above. Once this layer for detecting the box is built we will then insert it into the above architecture. For training the model, we freezed the convolution layer and only trained the full-trained layer to ensure that any previous features learned by the CNN are not destroyed and used a mean-squared error loss function on the training data-set. The newly added architecture is as shown in the image below:
 
-TO BE CHANGED
 <div align="center">
-  	<img src="images/ocr-image.jpg"><br>
-    <em>OCR output </em>
+  	<img src="images/VGGUpdated.jpg"><br>
+    <em>Custom Layer on VGG</em>
 </div>
 <br>
 
 An example of the prediction from the above model is as follows. In the below input image a product with the expiry date in focus is input into the prediction model:
 
 <div align="center">
-    TO BE CHANGED
-  	<img src="images/ocr-image.jpg"><br>
-    <em>OCR output </em>
+  	<img src="images/BBox-1.png"><br>
+    <em>Incorrect Output of Bounding Box Regression Model</em>
 </div>
 <br>
 
