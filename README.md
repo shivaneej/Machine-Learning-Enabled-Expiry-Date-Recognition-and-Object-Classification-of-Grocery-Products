@@ -98,6 +98,7 @@ On training the ResNet-50 model with the initial dataset, overfitting was eviden
 The batch size, learning rate and number of epochs were altered to check for the optimal values that led to improved classification accuracy. After much experimenting, the best values for these hyperparameters turned out to be:
 
 | Batch Size | 64  | 
+|----|----------|
 | Learning Rate | 0.01 |
 | Number of epochs | 20 | 
 
