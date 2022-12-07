@@ -96,7 +96,7 @@ On training the ResNet-50 model with the initial dataset, overfitting was eviden
 The batch size, learning rate and number of epochs were altered to check for the optimal values that led to improved classification accuracy. After much experimenting, the best values for these hyperparameters turned out to be:
 
 <table>
-  <tr><td>Batch Size</td><td>64</td></tr>
+  <tr><td>Batch Size</td><td>256</td></tr>
   <tr><td>Learning Rate</td><td>0.01</td></tr>
   <tr><td>Number of epochs</td><td>20</td></tr>
 </table>
@@ -158,7 +158,7 @@ This object classification task is an image classification task based on Transfe
 
 # Results and Discussion
 ## Object Classification
-The performance of the classification model is shown below with respect to its test and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the original dataset used for this classification model was comparatively very small. Thus, increasing the size of the data before augmentation could be the key to fix the overfitting problem. Methods like standardization, regularization, addition of dropout layers when necessary and fine tuning of hyperparameters could help in improving the model’s performance further.
+The performance of the classification model is shown below with respect to its train and validation accuracy and loss. The training loss starts out to be around 0.45 and decreases to about 0.1 while the accuracy starts pretty high and gets better with each epoch. The accuracy of the model shows that the model is overfitting the data to an extent. This could mostly be due to the dataset. Image classification models require huge datasets and the original dataset used for this classification model was comparatively very small. Thus, increasing the size of the data before augmentation could be the key to fix the overfitting problem. Methods like standardization, regularization, addition of dropout layers when necessary and fine tuning of hyperparameters could help in improving the model’s performance further.
 
 <div align="center">
   	<img src="images/Results_1.png"> <br>
@@ -185,6 +185,16 @@ The below images show the sample outputs for some images for which the model pre
     <em>Model classification performance on some samples</em>
 </div>
 <br>
+
+## Improved Model
+The initial problem of overfitting was handled through adding dropout layers and finetuning the model hyperparameters, especially batch size. The updated results show that there is an improvement in validation accuracy - to an extent it is more than training accuracy. Through increasing the batch size, we improve the model metric and also reduce the runtime per epoch - overall making the system more efficient that earlier. As shown in the graph below, the training and validation accuracies start at a lower value and increase steadily to reach a saturation point at around 20 epoch runs. The validation accuracy is about 0.5-1.0 more than the training accuracy throughout the epochs.
+<br>
+The final evaluation metrics are shown below: <br>
+1) Training Accuracy: 79.77% <br>
+2) Validation Accuracy: 83.15% <br>
+3) Precision: 84.33% <br>
+4) Recall: 92.50% <br>
+5) F1 Score: 88.23% <br>
 
 ## Expiry Date Detection
 After splitting the images from the ExpDate data-set into train and test sets in a ratio of 4:1, we trained the model using the architecture as detailed above on the train data-set. Later we tested the trained architecture on the test data-set. The Loss vs Epoch for both training and validation tests is as shown in the image below:
