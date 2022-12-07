@@ -131,7 +131,7 @@ An example of the prediction from the above model is as follows. In the below in
 </div>
 <br>
 
-From the above example we can see that the date was not detected correctly as the text was not captured entirely (the output from the detection model was 2022.1221). To overcome this and make the model better, we have fine tuned various parameters of the model such as batch_size, optimized the hidden layers, number of neurons in the layers, activation functions for the neurons such as ReLu, TanH etc. to improve our prediction performance. After the fine tuning, some of the predictions from the model are as follows:
+From the above example we can see that the bounding-box was not detected properly. To overcome this and make the model better, we have fine tuned various parameters of the model such as batch_size, optimized the hidden layers, number of neurons in the layers, activation functions for the neurons such as ReLu, TanH etc. to improve our prediction performance.
 
 ## Optical Character Recognition
 From the previous step, we have the coordinates of bounding boxes where the expiry date is. We then crop the image to get the Region of Interest and converted the image to grayscale, then resized our image and applied morphological transforms to enhance the contrast of the pixels of the image. We then used EasyOCR to get the text from the image. 
@@ -193,6 +193,8 @@ The below images show the sample outputs for some images for which the model pre
 Performance metrics used to evaluate the models will be balanced accuracy, precision, recall, f1-score, confusion matrix, ROC AUC and Top-k classification accuracy. 
 
 A mobile application that demonstrates the working of the models could also be designed. Further, this work can be extended towards the development of a scanner that can help the visually impaired in a potential lifesaving situation – as in the case of detecting expired medicines.  -->
+# Conclusion
+Expiry date detection can be very helpful in many real-world scenarios. Either to aid the visually impaired or to just make it easier to read expiry dates which could be printed in various formats and fonts, implementing an automated date detector could be beneficial. This work utilized concepts of computer vision and regression models in order to detect the category of the object and then the expiry date printed on it. Initially, PCA was used to compress the images as part of unsupervised learning. A fine-tuned ResNet-50 model pretrained on the ImageNet dataset was used for the supervised object classification task while the VGG-16 regression model was used in order to produce bounding boxes to detect the region of the expiry date which was then generated as text output using OCR. Although the ResNet-50 model overfitted the data initially, adding dropout layers, tuning the hyperparameters and increasing the training data size using image augmentation helped in overcoming overfitting. This work could be extended to using more recent models such as AlexNet and InceptionNet for classification to see if there will be any performance improvement. 
 
 # Reference
 1. Ahmet Cagatay Seker, Sang Chul Ahn “A generalized framework for recognition of expiration dates on product packages using fully convolutional networks”, Expert Systems with Applications, Volume 203, 2022, 117310, ISSN 0957-4174, [https://doi.org/10.1016/j.eswa.2022.117310](https://doi.org/10.1016/j.eswa.2022.117310). 
@@ -229,7 +231,7 @@ A mobile application that demonstrates the working of the models could also be d
 </thead>
 <tbody>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Shivanee Jaiswal </td>
+    <td class="tg-c3ow" rowspan="6">Shivanee Jaiswal </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
@@ -239,23 +241,35 @@ A mobile application that demonstrates the working of the models could also be d
     <td class="tg-0pky">Unsupervised learning - Image compression </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Supervised Learning - Image date detection </td>
+    <td class="tg-0pky">Bounding Box Regression Model</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Reshma Ramachandra </td>
+    <td class="tg-0pky">OCR</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Final Presentation Slides and Video</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="7">Reshma Ramachandra </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
     <td class="tg-0pky">Literature review </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Unsupervised Learning - Product Classification </td>
+    <td class="tg-0pky">Supervised Learning - Product Classification </td>
+  </tr>
+   <tr>
+    <td class="tg-0pky">Fine Tuning Classification Model</td>
   </tr>
   <tr>
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Janavi Khochare </td>
+    <td class="tg-0pky">Final Presentation Slides and Video</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="6">Janavi Khochare </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
@@ -265,10 +279,16 @@ A mobile application that demonstrates the working of the models could also be d
     <td class="tg-0pky">Literature Review </td>
   </tr>
   <tr>
-    <td class="tg-0pky">Supervised learning - Date detection </td>
+    <td class="tg-0pky">Bounding Box Regression Model</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Srikesh Reddy </td>
+    <td class="tg-0pky">OCR</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Final Presentation Slides and Video</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="6">Srikesh Reddy </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
@@ -281,7 +301,13 @@ A mobile application that demonstrates the working of the models could also be d
     <td class="tg-0pky">Evaluation metrics </td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Nikhil Viswanath </td>
+    <td class="tg-0pky">Github Page</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Final Presentation Slides and Video</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="6">Nikhil Viswanath </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
@@ -292,6 +318,12 @@ A mobile application that demonstrates the working of the models could also be d
   </tr>
   <tr>
     <td class="tg-0pky">Data sourcing and cleaning for supervised learning </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Fine Tuning Classification Model</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Final Presentation Slides and Video</td>
   </tr>
 </tbody>
 </table>
