@@ -250,7 +250,7 @@ Expiry date detection can be very helpful in many real-world scenarios. Either t
     <td class="tg-0pky">Final Presentation Slides and Video</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="7">Reshma Ramachandra </td>
+    <td class="tg-c3ow" rowspan="6">Reshma Ramachandra </td>
     <td class="tg-0pky">Project Midterm Report </td>
   </tr>
   <tr>
