@@ -122,13 +122,29 @@ TO BE CHANGED
 </div>
 <br>
 
-For, the cropping and date extraction process using OCR, we started with converting the image to grayscale, then resized our image and applied morphological transforms to enhance the contrast of the pixels of the image. 
+An example of the prediction from the above model is as follows. In the below input image a product with the expiry date in focus is input into the prediction model:
+
+<div align="center">
+    TO BE CHANGED
+  	<img src="images/ocr-image.jpg"><br>
+    <em>OCR output </em>
+</div>
+<br>
+
+From the above example we can see that the date was not detected correctly as the text was not captured entirely (the output from the detection model was 2022.1221). To overcome this and make the model better, we have fine tuned various parameters of the model such as batch_size, optimized the hidden layers, number of neurons in the layers, activation functions for the neurons such as ReLu, TanH etc. to improve our prediction performance. After the fine tuning, some of the predictions from the model are as follows:
+
+## Optical Character Recognition
+From the previous step, we have the coordinates of bounding boxes where the expiry date is. We then crop the image to get the Region of Interest and converted the image to grayscale, then resized our image and applied morphological transforms to enhance the contrast of the pixels of the image. We then used EasyOCR to get the text from the image. 
 
 <div align="center">
   	<img src="images/ocr-image.jpg"><br>
     <em>OCR output </em>
 </div>
 <br>
+
+## Integration 
+The integrated model takes a test image as input which is then preprocessed according to the image size required by the classification and detection models. This image is passed to the classification model which outputs the category the object in the image belongs to. That is, first the model classifies the object into one of the six categories (Dairy, Fruits, Vegetable, Snacks, Beverages, Other) and if the image belongs to Dairy, Snacks or Beverages, that input image is tagged as belonging to the “Packed” category and is passed on to the expiry date detection model to generate the expiry date printed on the package. If the input image belongs to the other categories (Fruits, Vegetables and Others), then just the output of the classification model is displayed since there is no visible expiry date to detect. 
+
 
 <!-- The aim of this project is to: 
 * Identify the product using object classification (supervised learning) 
